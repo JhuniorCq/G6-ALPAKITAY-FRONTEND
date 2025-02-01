@@ -1,0 +1,9 @@
+.navbar__list {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.navbar__link {
+  font-size: 0.95rem;
+  color: black;
+}
