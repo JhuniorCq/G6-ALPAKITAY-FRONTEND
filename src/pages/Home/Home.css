@@ -1,4 +1,9 @@
 .home {
-  padding: var(--lateral-padding);
-  margin: 40px 0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home > *:not(.about, .footer) {
+  margin-bottom: 60px;
 }

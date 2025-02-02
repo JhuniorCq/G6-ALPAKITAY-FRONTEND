@@ -1,0 +1,32 @@
+.about {
+  padding: 60px clamp(4.5rem, 10vw, 12rem);
+  background-color: #fffbd8;
+}
+
+.about__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.about__content {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  /* border: 1px solid blue; */
+}
+
+.about__info {
+  width: 35%;
+  /* border: 1px solid red; */
+}
+
+.about__infot-title {
+  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.about__info-text {
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
+}

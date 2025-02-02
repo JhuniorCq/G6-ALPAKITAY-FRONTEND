@@ -1,0 +1,134 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Poncho Andino",
+      "price": 120,
+      "description": "Poncho artesanal tejido a mano con lana de alpaca.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "ponchos",
+      "textileArtisan": "Juan Quispe"
+    },
+    {
+      "id": 2,
+      "name": "Chullo de Alpaca",
+      "price": 45,
+      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "textileArtisan": "María Huamán"
+    },
+    {
+      "id": 3,
+      "name": "Manta Cusqueña",
+      "price": 85,
+      "description": "Manta colorida tejida con patrones andinos.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "mantas",
+      "textileArtisan": "Rosa Mamani"
+    },
+    {
+      "id": 4,
+      "name": "Bufanda de Baby Alpaca",
+      "price": 65,
+      "description": "Bufanda suave y ligera, perfecta para el invierno.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "bufandas",
+      "textileArtisan": "Carlos Quispe"
+    },
+    {
+      "id": 5,
+      "name": "Tapiz de los Andes",
+      "price": 150,
+      "description": "Tapiz decorativo con paisajes andinos, tejido a mano.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "tapices",
+      "textileArtisan": "Elena Condori"
+    },
+    {
+      "id": 6,
+      "name": "Poncho de Alpaca Clásico",
+      "price": 130,
+      "description": "Poncho tradicional hecho con lana de alpaca de alta calidad.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "ponchos",
+      "textileArtisan": "Miguel Taype"
+    },
+    {
+      "id": 7,
+      "name": "Poncho con Capucha",
+      "price": 140,
+      "description": "Poncho moderno con capucha, ideal para climas fríos.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "ponchos",
+      "textileArtisan": "Ana Ccahuana"
+    },
+    {
+      "id": 8,
+      "name": "Chullo Andino Multicolor",
+      "price": 50,
+      "description": "Chullo tejido a mano con colores vivos y patrones tradicionales.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "textileArtisan": "Luis Apaza"
+    },
+    {
+      "id": 9,
+      "name": "Chullo de Oveja Natural",
+      "price": 40,
+      "description": "Chullo tejido con lana de oveja sin teñir, diseño rústico.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "textileArtisan": "Roxana Quispe"
+    },
+    {
+      "id": 10,
+      "name": "Manta de Alpaca Fina",
+      "price": 100,
+      "description": "Manta extra suave tejida con lana de alpaca fina.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "mantas",
+      "textileArtisan": "Pedro Huanca"
+    },
+    {
+      "id": 11,
+      "name": "Bufanda Clásica de Alpaca",
+      "price": 55,
+      "description": "Bufanda tejida a mano con lana de alpaca de alta calidad.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "bufandas",
+      "textileArtisan": "Juana Callo"
+    },
+    {
+      "id": 12,
+      "name": "Tapiz de Llamas",
+      "price": 180,
+      "description": "Tapiz artesanal con figuras de llamas andinas, colores vibrantes.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "tapices",
+      "textileArtisan": "Efraín Mamani"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "ponchos"
+    },
+    {
+      "id": 2,
+      "name": "chullos"
+    },
+    {
+      "id": 3,
+      "name": "mantas"
+    },
+    {
+      "id": 4,
+      "name": "bufandas"
+    },
+    {
+      "id": 5,
+      "name": "tapices"
+    }
+  ]
+}

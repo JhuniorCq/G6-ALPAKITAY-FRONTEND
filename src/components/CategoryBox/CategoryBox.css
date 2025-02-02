@@ -39,3 +39,8 @@
 .category-box__item:hover {
   background-color: #f0f0f0;
 }
+
+.category-box__link {
+  color: black;
+  text-transform: capitalize;
+}

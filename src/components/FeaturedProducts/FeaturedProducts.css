@@ -1,0 +1,16 @@
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 1px solid red; */
+  padding: 0 clamp(4.5rem, 10vw, 12rem);
+}
+
+.featured-products__list {
+  display: flex;
+  /* border: 1px solid blue; */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}

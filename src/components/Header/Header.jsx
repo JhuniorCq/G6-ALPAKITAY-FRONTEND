@@ -3,11 +3,18 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { CategoryBox } from "../CategoryBox/CategoryBox";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/");
+  };
+
   return (
     <header className="header">
-      <img src="" alt="Alpakitay" />
+      <img className="header__logo" src="" alt="Alpakitay" onClick={goToHome} />
 
       <CategoryBox />
 

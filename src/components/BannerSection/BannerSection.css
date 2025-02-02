@@ -1,6 +1,7 @@
 .banner-section {
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 0 clamp(4.5rem, 10vw, 12rem);
   display: flex;
   justify-content: center;
   gap: 2rem;
