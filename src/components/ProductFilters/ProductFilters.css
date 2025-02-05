@@ -1,0 +1,6 @@
+.product-filters {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  border: 1px solid red;
+}

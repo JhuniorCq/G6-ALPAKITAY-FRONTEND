@@ -30,8 +30,6 @@ export const useGetProducts = () => {
         loadingProducts: false,
         errorProducts: errorMessage,
       });
-
-      return null;
     }
   };
 

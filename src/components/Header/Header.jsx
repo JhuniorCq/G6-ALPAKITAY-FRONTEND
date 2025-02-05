@@ -2,8 +2,8 @@ import { Navbar } from "../Navbar/Navbar";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { CategoryBox } from "../CategoryBox/CategoryBox";
-import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import "./Header.css";
 
 export const Header = () => {
   const navigate = useNavigate();

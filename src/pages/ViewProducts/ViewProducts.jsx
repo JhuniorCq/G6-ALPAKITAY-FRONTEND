@@ -1,42 +1,58 @@
-import { useProducts } from "../../hooks/useProducts";
+import { useContextProducts } from "../../hooks/useContextProducts";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import "./ViewProducts.css";
+import { useEffect, useState } from "react";
 import { ProductCard } from "../../components/ProductCard/ProductCard";
+import { ProductFilters } from "../../components/ProductFilters/ProductFilters";
+import "./ViewProducts.css";
 
 export const ViewProducts = () => {
   const { category = null } = useParams();
-  const { products, loadingProducts, errorProducts, handleGetProducts } =
-    useProducts();
+  const {
+    /*products,*/ responseProducts,
+    loadingProducts,
+    errorProducts,
+    handleGetProducts,
+  } = useContextProducts();
+  const [filteredProducts, setFilteredProducts] = useState(null);
 
   useEffect(() => {
-    handleGetProducts({ queryParameter: category });
+    const getProducts = async () => {
+      const data = await handleGetProducts({ queryParameter: category });
+      console.log(":D", data);
+      setFilteredProducts(data);
+    };
+
+    getProducts();
   }, [category]);
 
   return (
     <section className="view-products">
       <h1 className="view-products__title">{category ?? "Productos"}</h1>
 
-      {/* TODO: Los filtros se harían por precios y por artesanos */}
-      <div>
-        {/* <button>Filtrar por precio</button>
-        <button>Filtrar por artesano</button> */}
-      </div>
-
+      <ProductFilters
+        filteredProducts={filteredProducts}
+        setFilteredProducts={setFilteredProducts}
+      />
+      {console.log("filteredProducts: ", filteredProducts, loadingProducts)}
       <ul className="view-products__list">
         {loadingProducts ? (
           <p>Cargando ...</p>
         ) : errorProducts ? (
           <p>{errorProducts}</p>
         ) : (
-          products.map((product) => (
-            <ProductCard
-              key={product.id}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-              textileArtisan={product.textileArtisan}
-            />
+          filteredProducts &&
+          (filteredProducts.length === 0 ? (
+            <p>No se encontraron productos</p>
+          ) : (
+            filteredProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+                artisan={product.artisan}
+              />
+            ))
           ))
         )}
       </ul>

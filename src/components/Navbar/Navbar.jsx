@@ -9,7 +9,9 @@ export const Navbar = () => {
           <Link className="navbar__link">Historias de Impacto</Link>
         </li>
         <li className="navbar__item">
-          <Link className="navbar__link">Artesanos</Link>
+          <Link to="/artisans" className="navbar__link">
+            Artesanos
+          </Link>
         </li>
       </ul>
     </nav>
