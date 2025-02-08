@@ -4,6 +4,6 @@
   flex-direction: column;
 }
 
-.home > *:not(.about, .footer) {
+.home > *:not(.about) {
   margin-bottom: 60px;
 }

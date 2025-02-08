@@ -8,6 +8,7 @@ import "./CategoryBox.css";
 const customStyles = {
   control: (defaultStyles, state) => ({
     ...defaultStyles,
+    cursor: "pointer",
     borderColor: "transparent",
     boxShadow: "none",
     backgroundColor: "transparent",

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ProductsContext } from "./ProductsContex";
-import { useGetProducts } from "../../hooks/useGetProducts";
 import { URL_SERVER } from "../../utils/constants";
 import { useGet } from "../../hooks/useGet";
 

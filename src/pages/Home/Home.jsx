@@ -1,7 +1,6 @@
 import { About } from "../../components/About/About";
 import { BannerSection } from "../../components/BannerSection/BannerSection";
 import { FeaturedProducts } from "../../components/FeaturedProducts/FeaturedProducts";
-import { Footer } from "../../components/Footer/Footer";
 import "./Home.css";
 
 export const Home = () => {
@@ -12,7 +11,6 @@ export const Home = () => {
       <FeaturedProducts title="Descubre artículos extraordinarios a precios especiales" />
       <FeaturedProducts title="Descubre artículos extraordinarios a precios especiales" />
       <About />
-      <Footer />
     </section>
   );
 };
