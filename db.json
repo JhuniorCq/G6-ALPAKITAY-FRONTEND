@@ -7,7 +7,8 @@
       "description": "Poncho artesanal tejido a mano con lana de alpaca.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Juan Quispe"
+      "artisan": "Juan Quispe",
+      "stockQuantity": 10
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "description": "Chullo tradicional con orejeras, hecho con lana de alpaca.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "María Huamán"
+      "artisan": "María Huamán",
+      "stockQuantity": 15
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "description": "Manta colorida tejida con patrones andinos.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "mantas",
-      "artisan": "Rosa Mamani"
+      "artisan": "Rosa Mamani",
+      "stockQuantity": 8
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "description": "Bufanda suave y ligera, perfecta para el invierno.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "bufandas",
-      "artisan": "Carlos Quispe"
+      "artisan": "Carlos Quispe",
+      "stockQuantity": 12
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "description": "Tapiz decorativo con paisajes andinos, tejido a mano.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Elena Condori"
+      "artisan": "Elena Condori",
+      "stockQuantity": 7
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "description": "Poncho tradicional hecho con lana de alpaca de alta calidad.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Miguel Taype"
+      "artisan": "Miguel Taype",
+      "stockQuantity": 9
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "description": "Poncho moderno con capucha, ideal para climas fríos.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Ana Ccahuana"
+      "artisan": "Ana Ccahuana",
+      "stockQuantity": 6
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "description": "Chullo tejido a mano con colores vivos y patrones tradicionales.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "Luis Apaza"
+      "artisan": "Luis Apaza",
+      "stockQuantity": 14
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "description": "Chullo tejido con lana de oveja sin teñir, diseño rústico.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "Roxana Quispe"
+      "artisan": "Roxana Quispe",
+      "stockQuantity": 11
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "description": "Manta extra suave tejida con lana de alpaca fina.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "mantas",
-      "artisan": "Pedro Huanca"
+      "artisan": "Pedro Huanca",
+      "stockQuantity": 5
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "description": "Bufanda tejida a mano con lana de alpaca de alta calidad.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "bufandas",
-      "artisan": "Juana Callo"
+      "artisan": "Juana Callo",
+      "stockQuantity": 13
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "description": "Tapiz artesanal con figuras de llamas andinas, colores vibrantes.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Efraín Mamani"
+      "artisan": "Efraín Mamani",
+      "stockQuantity": 4
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "description": "Tapiz artesanal con figuras de alpacas andinas, colores vibrantes.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Elena Condori"
+      "artisan": "Elena Condori",
+      "stockQuantity": 6
     }
   ],
   "artisan": [

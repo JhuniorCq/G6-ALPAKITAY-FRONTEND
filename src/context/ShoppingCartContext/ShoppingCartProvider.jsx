@@ -105,7 +105,7 @@ export const ShoppingCartProvider = ({ children }) => {
       payload: id,
     };
 
-    shoppingCartDispatch(id);
+    shoppingCartDispatch(action);
   };
 
   const decreaseProductCart = (id) => {

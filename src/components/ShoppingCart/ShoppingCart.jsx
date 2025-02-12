@@ -3,9 +3,23 @@ import { FaTrashAlt } from "react-icons/fa";
 import { ShoppingCartProduct } from "../ShoppingCartProduct/ShoppingCartProduct";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
 import "./ShoppingCart.css";
+import { calculateTotalCost, quantityOfItems } from "../../utils/logic";
+import { modalConfirmationShoppingCart } from "../../utils/notifications/modals";
 
 export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
   const { shoppingCart, removeAllProductsCart } = useContextShoppingCart();
+
+  const deleteAllProductsCart = () => {
+    removeAllProductsCart();
+    modalConfirmationShoppingCart({
+      title: "¿Estás seguro?",
+      text: "Se eliminarán todos los productos del carrito",
+      icon: "warning",
+      confirmTitle: "Productos eliminados",
+      confirmText: "El carrito de compras ha sido vaciado",
+      confirmIcon: "success",
+    });
+  };
 
   return (
     <div
@@ -25,7 +39,9 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
         onClick={(event) => event.stopPropagation()}
       >
         <div className="shopping-cart__header">
-          <p className="shopping-cart__header-title">CARRITO DE COMPRAS (3)</p>
+          <p className="shopping-cart__header-title">
+            CARRITO DE COMPRAS ({quantityOfItems(shoppingCart)})
+          </p>
           <IoMdClose
             className="shopping-cart__close-button"
             onClick={closeShoppingCart}
@@ -53,10 +69,12 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
 
         <div className="shopping-cart__footer">
           <div className="shopping-cart__total-cost-box">
-            <p className="shopping-cart__total-cost">TOTAL: S/. 100.00</p>
+            <p className="shopping-cart__total-cost">
+              TOTAL: S/. {calculateTotalCost(shoppingCart).toFixed(2)}
+            </p>
             <FaTrashAlt
               className="shopping-cart__clear-all-button"
-              onClick={removeAllProductsCart}
+              onClick={deleteAllProductsCart}
             />
           </div>
           <button className="shopping-cart__buy-button">Realizar compra</button>
