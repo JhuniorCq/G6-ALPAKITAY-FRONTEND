@@ -79,7 +79,6 @@
 
 .product-card__artisan-name {
   cursor: pointer;
-  font-weight: normal;
   transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }
 

@@ -19,25 +19,48 @@ export const ViewProduct = () => {
     getProduct({ url: `${URL_SERVER}/products/${id}` });
   }, []);
 
-  return (
-    <section>
-      {loadingProduct ? (
-        <p>Cargando ...</p>
-      ) : errorProduct ? (
-        <p>{errorProduct}</p>
-      ) : (
-        responseProduct && (
-          <>
-            <p>
-              Vista del producto con ID: {id} y con nombre:{" "}
-              {responseProduct.name}
+  return loadingProduct ? (
+    <p>Cargando ...</p>
+  ) : errorProduct ? (
+    <p>{errorProduct}</p>
+  ) : (
+    responseProduct && (
+      <>
+        <section className="view-product">
+          <div className="view-product__image-box">
+            <img
+              src={responseProduct.image}
+              alt={responseProduct.name}
+              className="view-product__image"
+            />
+          </div>
+          <div className="view-product__info">
+            <p className="view-product__stock-text">
+              ¡Stock limitado! Solo quedan{" "}
+              <span className="view-product__stock">
+                {responseProduct.stockQuantity}
+              </span>{" "}
+              unidades
             </p>
-            <br />
-            <br />
-            <p>{JSON.stringify(responseProduct)}</p>
-          </>
-        )
-      )}
-    </section>
+            <p className="view-product__price">
+              S/. {responseProduct.price.toFixed(2)}
+            </p>
+            <h1 className="view-product__name">{responseProduct.name}</h1>
+            <p className="view-product__artisan-text">
+              Producto fabricado por{" "}
+              <span className="view-product__artisan-name">
+                {responseProduct.artisan}
+              </span>
+            </p>
+            <p className="view-product__description">
+              {responseProduct.description}
+            </p>
+            <button className="view-product__add-button">
+              Agregar al carrito
+            </button>
+          </div>
+        </section>
+      </>
+    )
   );
 };
