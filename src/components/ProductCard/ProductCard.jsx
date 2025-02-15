@@ -13,7 +13,7 @@ export const ProductCard = ({
   image,
   description,
   category,
-  artisan,
+  artisanShop,
 }) => {
   const { shoppingCart, addProductCart } = useContextShoppingCart();
   const [showAddCartButton, setShowAddCartButton] = useState(false);
@@ -37,7 +37,7 @@ export const ProductCard = ({
       return;
     }
 
-    addProductCart({ id, name, price, image, artisan });
+    addProductCart({ id, name, price, image, artisanShop });
 
     shoppingCartToast({
       title: "Se ha agregado el producto al carrito",
@@ -81,7 +81,7 @@ export const ProductCard = ({
         <p className="product-card__price">S/. {price}</p>
         <p className="product-card__artisan">
           Producto de{" "}
-          <span className="product-card__artisan-name">{artisan}</span>
+          <span className="product-card__artisan-name">{artisanShop}</span>
         </p>
       </div>
     </li>

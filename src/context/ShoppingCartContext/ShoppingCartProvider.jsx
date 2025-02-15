@@ -60,7 +60,7 @@ export const ShoppingCartProvider = ({ children }) => {
       }
     }
 
-    window.sessionStorage.setItem(
+    window.localStorage.setItem(
       CART_KEY_SESSION_STORAGE,
       JSON.stringify(updatedStatus)
     );
@@ -68,15 +68,15 @@ export const ShoppingCartProvider = ({ children }) => {
     return updatedStatus;
   };
 
-  const getCartSessionStorage = (initialShoppingCart) => {
-    const cartSaved = window.sessionStorage.getItem(CART_KEY_SESSION_STORAGE);
+  const getCartLocalStorage = (initialShoppingCart) => {
+    const cartSaved = window.localStorage.getItem(CART_KEY_SESSION_STORAGE);
     return cartSaved ? JSON.parse(cartSaved) : initialShoppingCart;
   };
 
   const [shoppingCart, shoppingCartDispatch] = useReducer(
     shoppingCartReducer,
     [],
-    getCartSessionStorage
+    getCartLocalStorage
   );
 
   const addProductCart = (product) => {

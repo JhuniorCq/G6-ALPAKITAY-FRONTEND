@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-export const useGet = ({ /*url,*/ loading }) => {
+export const useGet = ({ loading }) => {
   const [stateGet, setStateGet] = useState({
     responseGet: null,
     loadingGet: loading,

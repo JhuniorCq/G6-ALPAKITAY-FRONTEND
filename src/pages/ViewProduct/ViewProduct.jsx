@@ -49,7 +49,7 @@ export const ViewProduct = () => {
             <p className="view-product__artisan-text">
               Producto fabricado por{" "}
               <span className="view-product__artisan-name">
-                {responseProduct.artisan}
+                {responseProduct.artisanShop}
               </span>
             </p>
             <p className="view-product__description">

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useGetCategories } from "../../hooks/useGetCategories";
 import { URL_SERVER } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import "./CategoryBox.css";
+import { useGet } from "../../hooks/useGet";
 
 const customStyles = {
   control: (defaultStyles, state) => ({
@@ -39,13 +39,14 @@ const customStyles = {
 };
 
 export const CategoryBox = () => {
-  // const [showCategories, setShowCategories] = useState(false);
   const {
-    responseCategories,
-    loadingCategories,
-    errorCategories,
-    getCategories,
-  } = useGetCategories();
+    responseGet: responseCategories,
+    loadingGet: loadingCategories,
+    errorGet: errorCategories,
+    getData: getCategories,
+  } = useGet({
+    loading: true,
+  });
 
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
@@ -85,33 +86,4 @@ export const CategoryBox = () => {
       />
     )
   );
-  // <div className="category-box">
-  //   <button
-  //     className="category-box__button"
-  //     onClick={() => setShowCategories(!showCategories)}
-  //   >
-  //     Categorías
-  //   </button>
-
-  //   {showCategories && (
-  //     <ul className="category-box__list">
-  //       {loadingCategories ? (
-  //         <li>Cargando ...</li>
-  //       ) : errorCategories ? (
-  //         <li>{errorCategories}</li>
-  //       ) : (
-  //         responseCategories.map((category) => (
-  //           <li key={category.id} className="category-box__item">
-  //             <Link
-  //               to={`/products/${category.name}`}
-  //               className="category-box__link"
-  //             >
-  //               {category.name}
-  //             </Link>
-  //           </li>
-  //         ))
-  //       )}
-  //     </ul>
-  //   )}
-  // </div>
 };

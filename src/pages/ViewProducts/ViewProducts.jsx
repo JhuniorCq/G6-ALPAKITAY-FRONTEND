@@ -20,7 +20,7 @@ export const ViewProducts = () => {
       value: 0,
       label: ALL_OPTION,
     },
-    artisan: {
+    artisanShop: {
       value: 0,
       label: ALL_OPTION,
     },
@@ -43,21 +43,22 @@ export const ViewProducts = () => {
       console.log("Filtros seleccionados: ", selectedFilters);
 
       const priceOption = selectedFilters.price;
-      const artisanOption = selectedFilters.artisan;
+      const artisanShopOption = selectedFilters.artisanShop;
 
       // Hacer el filtrado de productos acá
       const acceptedProducts = responseProducts.filter((product) => {
         const condition =
-          priceOption.label === ALL_OPTION && artisanOption.label === ALL_OPTION
+          priceOption.label === ALL_OPTION &&
+          artisanShopOption.label === ALL_OPTION
             ? true
-            : artisanOption.label === ALL_OPTION
+            : artisanShopOption.label === ALL_OPTION
             ? product.price >= priceOption.min &&
               product.price <= priceOption.max
             : priceOption.label === ALL_OPTION
-            ? product.artisan === artisanOption.label
+            ? product.artisanShop === artisanShopOption.label
             : product.price >= priceOption.min &&
               product.price <= priceOption.max &&
-              product.artisan === artisanOption.label;
+              product.artisanShop === artisanShopOption.label;
 
         return condition;
       });
@@ -82,7 +83,9 @@ export const ViewProducts = () => {
         ) : (
           filteredProducts &&
           (filteredProducts.length === 0 ? (
-            <p>No se encontraron productos</p>
+            <p className="view-products__not-products">
+              No se encontraron productos
+            </p>
           ) : (
             filteredProducts.map((product) => (
               <ProductCard
@@ -93,7 +96,7 @@ export const ViewProducts = () => {
                 image={product.image}
                 description={product.description}
                 category={product.category}
-                artisan={product.artisan}
+                artisanShop={product.artisanShop}
               />
             ))
           ))

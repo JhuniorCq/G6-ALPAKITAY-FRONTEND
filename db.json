@@ -7,7 +7,7 @@
       "description": "Poncho artesanal tejido a mano con lana de alpaca.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Juan Quispe",
+      "artisanShop": "Artesanías Quispe",
       "stockQuantity": 10
     },
     {
@@ -17,7 +17,7 @@
       "description": "Chullo tradicional con orejeras, hecho con lana de alpaca.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "María Huamán",
+      "artisanShop": "Creaciones Huamán",
       "stockQuantity": 15
     },
     {
@@ -27,7 +27,7 @@
       "description": "Manta colorida tejida con patrones andinos.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "mantas",
-      "artisan": "Rosa Mamani",
+      "artisanShop": "Tejidos Mamani",
       "stockQuantity": 8
     },
     {
@@ -37,7 +37,7 @@
       "description": "Bufanda suave y ligera, perfecta para el invierno.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "bufandas",
-      "artisan": "Carlos Quispe",
+      "artisanShop": "Moda Andina Quispe",
       "stockQuantity": 12
     },
     {
@@ -47,7 +47,7 @@
       "description": "Tapiz decorativo con paisajes andinos, tejido a mano.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Elena Condori",
+      "artisanShop": "Arte Textil Condori",
       "stockQuantity": 7
     },
     {
@@ -57,7 +57,7 @@
       "description": "Poncho tradicional hecho con lana de alpaca de alta calidad.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Miguel Taype",
+      "artisanShop": "Textiles Taype",
       "stockQuantity": 9
     },
     {
@@ -67,7 +67,7 @@
       "description": "Poncho moderno con capucha, ideal para climas fríos.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "ponchos",
-      "artisan": "Ana Ccahuana",
+      "artisanShop": "Diseños Ccahuana",
       "stockQuantity": 6
     },
     {
@@ -77,7 +77,7 @@
       "description": "Chullo tejido a mano con colores vivos y patrones tradicionales.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "Luis Apaza",
+      "artisanShop": "Creaciones Apaza",
       "stockQuantity": 14
     },
     {
@@ -87,7 +87,7 @@
       "description": "Chullo tejido con lana de oveja sin teñir, diseño rústico.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "chullos",
-      "artisan": "Roxana Quispe",
+      "artisanShop": "Moda Quispe",
       "stockQuantity": 11
     },
     {
@@ -97,7 +97,7 @@
       "description": "Manta extra suave tejida con lana de alpaca fina.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "mantas",
-      "artisan": "Pedro Huanca",
+      "artisanShop": "Taller Huanca",
       "stockQuantity": 5
     },
     {
@@ -107,7 +107,7 @@
       "description": "Bufanda tejida a mano con lana de alpaca de alta calidad.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "bufandas",
-      "artisan": "Juana Callo",
+      "artisanShop": "Telas Callo",
       "stockQuantity": 13
     },
     {
@@ -117,7 +117,7 @@
       "description": "Tapiz artesanal con figuras de llamas andinas, colores vibrantes.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Efraín Mamani",
+      "artisanShop": "Manos Andinas Mamani",
       "stockQuantity": 4
     },
     {
@@ -127,60 +127,84 @@
       "description": "Tapiz artesanal con figuras de alpacas andinas, colores vibrantes.",
       "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
       "category": "tapices",
-      "artisan": "Elena Condori",
+      "artisanShop": "Creaciones Condori",
       "stockQuantity": 6
     }
   ],
-  "artisan": [
+  "artisanShops": [
     {
       "id": 1,
-      "name": "Juan Quispe"
+      "name": "Arte Andino Quispe",
+      "artisan": "Juan Quispe",
+      "message": "Ponchos tejidos a mano con lana de alpaca, ideales para el frío."
     },
     {
       "id": 2,
-      "name": "María Huamán"
+      "name": "Creaciones Huamán",
+      "artisan": "María Huamán",
+      "message": "Chullos coloridos y con diseños únicos inspirados en la tradición andina."
     },
     {
       "id": 3,
-      "name": "Rosa Mamani"
+      "name": "Tejidos Mamani",
+      "artisan": "Rosa Mamani",
+      "message": "Mantas suaves y resistentes, tejidas con técnicas ancestrales."
     },
     {
       "id": 4,
-      "name": "Carlos Quispe"
+      "name": "Artesanías Quispe",
+      "artisan": "Carlos Quispe",
+      "message": "Bufandas hechas con lana de alpaca, perfectas para cualquier ocasión."
     },
     {
       "id": 5,
-      "name": "Elena Condori"
+      "name": "Tradición Condori",
+      "artisan": "Elena Condori",
+      "message": "Tapices llenos de historia y cultura, hechos con técnicas milenarias."
     },
     {
       "id": 6,
-      "name": "Miguel Taype"
+      "name": "Manos Andinas Taype",
+      "artisan": "Miguel Taype",
+      "message": "Ponchos exclusivos, con diseños inspirados en la naturaleza andina."
     },
     {
       "id": 7,
-      "name": "Ana Ccahuana"
+      "name": "Diseños Ccahuana",
+      "artisan": "Ana Ccahuana",
+      "message": "Chullos tejidos con amor y dedicación, cada uno con un diseño especial."
     },
     {
       "id": 8,
-      "name": "Luis Apaza"
+      "name": "Creaciones Apaza",
+      "artisan": "Luis Apaza",
+      "message": "Mantas de alpaca tejidas con precisión y cuidado para tu comodidad."
     },
     {
       "id": 9,
-      "name": "Roxana Quispe"
+      "name": "Arte Textil Quispe",
+      "artisan": "Roxana Quispe",
+      "message": "Bufandas elegantes y abrigadoras, perfectas para cualquier clima."
     },
     {
       "id": 10,
-      "name": "Pedro Huanca"
+      "name": "Textiles Huanca",
+      "artisan": "Pedro Huanca",
+      "message": "Tapices artesanales que cuentan historias de nuestra cultura."
     },
     {
       "id": 11,
-      "name": "Juana Callo"
+      "name": "Tierra Andina Callo",
+      "artisan": "Juana Callo",
+      "message": "Mantas coloridas y cálidas, tejidas con lana 100% natural."
     },
     {
       "id": 12,
-      "name": "Efraín Mamani"
+      "name": "Hilos de los Andes Mamani",
+      "artisan": "Efraín Mamani",
+      "message": "Ponchos tejidos a mano, combinando tradición y modernidad."
     }
-  ],
+],
   "categories": [
     {
       "id": 1,
