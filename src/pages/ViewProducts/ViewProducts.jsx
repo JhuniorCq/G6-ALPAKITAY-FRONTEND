@@ -9,13 +9,13 @@ import "./ViewProducts.css";
 export const ViewProducts = () => {
   const { category = null } = useParams();
   const {
-    /*products,*/ responseProducts,
+    responseProducts,
     loadingProducts,
     errorProducts,
     handleGetProducts,
   } = useContextProducts();
   const [filteredProducts, setFilteredProducts] = useState(null);
-  const [selectedFilters, setSelectedFilter] = useState({
+  const [selectedFilters, setSelectedFilters] = useState({
     price: {
       value: 0,
       label: ALL_OPTION,
@@ -38,68 +38,79 @@ export const ViewProducts = () => {
 
   // Filtros
   useEffect(() => {
-    // El if (responseProducts) es para que solo se haga el filtrado cuando responseProducts ya tenga un VALOR
     if (responseProducts) {
       console.log("Filtros seleccionados: ", selectedFilters);
 
       const priceOption = selectedFilters.price;
       const artisanShopOption = selectedFilters.artisanShop;
 
-      // Hacer el filtrado de productos acá
-      const acceptedProducts = responseProducts.filter((product) => {
-        const condition =
-          priceOption.label === ALL_OPTION &&
-          artisanShopOption.label === ALL_OPTION
-            ? true
-            : artisanShopOption.label === ALL_OPTION
-            ? product.price >= priceOption.min &&
-              product.price <= priceOption.max
-            : priceOption.label === ALL_OPTION
-            ? product.artisanShop === artisanShopOption.label
-            : product.price >= priceOption.min &&
-              product.price <= priceOption.max &&
-              product.artisanShop === artisanShopOption.label;
+      // Función que determina si un producto cumple con los filtros seleccionados
+      const isProductAccepted = (product) => {
+        const isAllPrice = priceOption.label === ALL_OPTION;
+        const isAllArtisanShop = artisanShopOption.label === ALL_OPTION;
 
-        return condition;
-      });
+        if (isAllPrice && isAllArtisanShop) {
+          return true;
+        }
+
+        if (isAllArtisanShop) {
+          return (
+            product.price >= priceOption.min && product.price <= priceOption.max
+          );
+        }
+
+        if (isAllPrice) {
+          return product.artisanShop === artisanShopOption.label;
+        }
+
+        return (
+          product.price >= priceOption.min &&
+          product.price <= priceOption.max &&
+          product.artisanShop === artisanShopOption.label
+        );
+      };
+
+      // Filtrar los productos usando la función
+      const acceptedProducts = responseProducts.filter(isProductAccepted);
 
       console.log("Productos filtrados: ", acceptedProducts);
 
       setFilteredProducts(acceptedProducts);
     }
-  }, [selectedFilters]);
+  }, [selectedFilters, responseProducts]);
 
   return (
     <section className="view-products">
       <h1 className="view-products__title">{category ?? "Productos"}</h1>
 
-      <ProductFilters setSelectedFilter={setSelectedFilter} />
+      <ProductFilters setSelectedFilters={setSelectedFilters} />
 
       <ul className="view-products__list">
-        {loadingProducts ? (
-          <p>Cargando ...</p>
-        ) : errorProducts ? (
-          <p>{errorProducts}</p>
-        ) : (
-          filteredProducts &&
-          (filteredProducts.length === 0 ? (
-            <p className="view-products__not-products">
-              No se encontraron productos
-            </p>
-          ) : (
-            filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                image={product.image}
-                description={product.description}
-                category={product.category}
-                artisanShop={product.artisanShop}
-              />
-            ))
-          ))
+        {loadingProducts && <p>Cargando ...</p>}
+
+        {!loadingProducts && errorProducts && <p>{errorProducts}</p>}
+
+        {!loadingProducts && !errorProducts && filteredProducts && (
+          <>
+            {filteredProducts.length === 0 ? (
+              <p className="view-products__not-products">
+                No se encontraron productos
+              </p>
+            ) : (
+              filteredProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  id={product.id}
+                  name={product.name}
+                  price={product.price}
+                  image={product.image}
+                  // description={product.description}
+                  category={product.category}
+                  artisanShop={product.artisanShop}
+                />
+              ))
+            )}
+          </>
         )}
       </ul>
     </section>

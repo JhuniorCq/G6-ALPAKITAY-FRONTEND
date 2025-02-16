@@ -2,14 +2,17 @@ import { IoMdClose } from "react-icons/io";
 import { FaTrashAlt } from "react-icons/fa";
 import { ShoppingCartProduct } from "../ShoppingCartProduct/ShoppingCartProduct";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
-import "./ShoppingCart.css";
 import { calculateTotalCost, quantityOfItems } from "../../utils/logic";
 import { modalConfirmationShoppingCart } from "../../utils/notifications/modals";
+import PropTypes from "prop-types";
+import "./ShoppingCart.css";
 
 export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
   const { shoppingCart, removeAllProductsCart } = useContextShoppingCart();
 
   const deleteAllProductsCart = () => {
+    if (shoppingCart.length === 0) return;
+
     removeAllProductsCart();
     modalConfirmationShoppingCart({
       title: "¿Estás seguro?",
@@ -82,4 +85,9 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
       </div>
     </div>
   );
+};
+
+ShoppingCart.propTypes = {
+  shoppingCartOpened: PropTypes.bool.isRequired,
+  closeShoppingCart: PropTypes.func.isRequired,
 };

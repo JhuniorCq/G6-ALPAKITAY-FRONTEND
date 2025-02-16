@@ -5,8 +5,9 @@ import { CategoryBox } from "../CategoryBox/CategoryBox";
 import { useNavigate } from "react-router-dom";
 import { ShoppingCart } from "../ShoppingCart/ShoppingCart";
 import { useState } from "react";
-import "./Header.css";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
+import logo from "../../assets/images/logo.png";
+import "./Header.css";
 
 export const Header = () => {
   const { shoppingCart } = useContextShoppingCart();
@@ -28,12 +29,9 @@ export const Header = () => {
   return (
     <>
       <header className="header">
-        <img
-          className="header__logo"
-          src=""
-          alt="Alpakitay"
-          onClick={goToHome}
-        />
+        <button className="header__logo-box" onClick={goToHome}>
+          <img className="header__logo" src={logo} alt="Alpakitay" />
+        </button>
 
         <CategoryBox />
 

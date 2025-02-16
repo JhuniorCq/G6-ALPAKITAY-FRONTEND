@@ -1,4 +1,5 @@
 import { FeaturedProduct } from "../FeaturedProduct/FeaturedProduct";
+import PropTypes from "prop-types";
 import "./FeaturedProducts.css";
 
 export const FeaturedProducts = ({ title }) => {
@@ -14,4 +15,8 @@ export const FeaturedProducts = ({ title }) => {
       </ul>
     </div>
   );
+};
+
+FeaturedProducts.propTypes = {
+  title: PropTypes.string.isRequired,
 };

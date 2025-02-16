@@ -1,9 +1,10 @@
 .home {
-  margin-top: 40px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
 .home > *:not(.about) {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }

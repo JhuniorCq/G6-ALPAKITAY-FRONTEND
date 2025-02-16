@@ -12,7 +12,7 @@ export const MyRoutes = () => {
         <Route path="/products/:category" element={<ViewProducts />} />
       </Route>
       <Route path="/products/:category/:id" element={<ViewProduct />} />
-      <Route path="/artisans" element={<ArtisanShopProfiles />} />
+      <Route path="/artisans-shops" element={<ArtisanShopProfiles />} />
     </Routes>
   );
 };

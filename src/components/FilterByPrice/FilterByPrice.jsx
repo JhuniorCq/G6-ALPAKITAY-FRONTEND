@@ -1,5 +1,7 @@
 import Select from "react-select";
 import { ALL_OPTION } from "../../utils/constants";
+import PropTypes from "prop-types";
+import "./FilterByPrice.css";
 
 const priceOptions = [
   {
@@ -38,20 +40,24 @@ const priceOptions = [
   },
 ];
 
-export const FilterByPrice = ({ setSelectedFilter }) => {
+export const FilterByPrice = ({ setSelectedFilters, customStyles }) => {
   const handleSelectChange = (selectedOption) => {
-    setSelectedFilter((prev) => ({ ...prev, price: selectedOption }));
+    setSelectedFilters((prev) => ({ ...prev, price: selectedOption }));
   };
 
   return (
-    <div>
-      <p>Precios: </p>
+    <div className="filter-by-price">
+      <p className="filter-by-price__name">Precios: </p>
       <Select
         options={priceOptions}
-        // placeholder="Precios"
         defaultValue={priceOptions[0]}
+        styles={customStyles}
         onChange={handleSelectChange}
       />
     </div>
   );
+};
+
+FilterByPrice.propTypes = {
+  setSelectedFilters: PropTypes.func.isRequired,
 };

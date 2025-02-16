@@ -1,5 +1,4 @@
 .product-card {
-  /* border: 1px solid violet; */
   width: 330px;
 }
 
@@ -9,7 +8,6 @@
   border-radius: 10px;
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
-  /* border: 1px solid blue; */
   position: relative;
 }
 
@@ -71,6 +69,11 @@
 
 .product-card__name {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .product-card__artisan {

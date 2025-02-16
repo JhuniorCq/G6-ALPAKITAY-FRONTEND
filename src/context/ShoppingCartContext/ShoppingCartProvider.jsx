@@ -1,9 +1,10 @@
-import { useReducer } from "react";
+import { useMemo, useReducer } from "react";
 import { ShoppingCartContext } from "./ShoppingCartContext";
 import {
   CART_KEY_SESSION_STORAGE,
   SHOPPING_CART_ACTIONS,
 } from "../../utils/constants";
+import PropTypes from "prop-types";
 
 export const ShoppingCartProvider = ({ children }) => {
   const shoppingCartReducer = (state, action) => {
@@ -125,18 +126,25 @@ export const ShoppingCartProvider = ({ children }) => {
     shoppingCartDispatch(action);
   };
 
+  const providerValue = useMemo(
+    () => ({
+      shoppingCart,
+      addProductCart,
+      removeProductCart,
+      increaseProductCart,
+      decreaseProductCart,
+      removeAllProductsCart,
+    }),
+    [shoppingCart]
+  );
+
   return (
-    <ShoppingCartContext.Provider
-      value={{
-        shoppingCart,
-        addProductCart,
-        removeProductCart,
-        increaseProductCart,
-        decreaseProductCart,
-        removeAllProductsCart,
-      }}
-    >
+    <ShoppingCartContext.Provider value={providerValue}>
       {children}
     </ShoppingCartContext.Provider>
   );
+};
+
+ShoppingCartProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

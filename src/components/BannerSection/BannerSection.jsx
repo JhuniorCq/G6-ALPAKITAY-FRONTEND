@@ -1,34 +1,46 @@
+import { useNavigate } from "react-router-dom";
 import chullo from "../../assets/images/chullo.jpg";
-
 import "./BannerSection.css";
 
 export const BannerSection = () => {
+  const navigate = useNavigate();
+
+  const goToAllProductsView = () => {
+    navigate("/products");
+  };
+
   return (
     <div className="banner-section">
-      <div className="banner-section__large-banner">
+      <button
+        className="banner-section__large-banner"
+        onClick={goToAllProductsView}
+      >
         <div className="banner-section__large-banner-text">
           <h1 className="banner-section__large-banner-title">
-            El amor no puede llegar tarde
+            Tejídos con historia y pasión
           </h1>
           <p className="banner-section__large-banner-paragraph">
-            Descubre regalos que se envían en 3 días o menos
+            Prendas y accesorios hechos a mano con tradición y calidad
           </p>
 
-          <button className="banner-section__large-banner-button">
-            Ver artículos de San Valentín
-          </button>
+          <span className="banner-section__large-banner-button">
+            Explorar productos
+          </span>
         </div>
         <img
           className="banner-section__large-banner-image"
           src={chullo}
-          alt="..."
+          alt=""
         />
-      </div>
+      </button>
 
-      <div className="banner-section__small-banner">
+      <button
+        className="banner-section__small-banner"
+        onClick={goToAllProductsView}
+      >
         <div className="banner-section__small-banner-text">
           <h1 className="banner-section__small-banner-title">
-            Regalos para ella
+            Elegancia en cada hilo
           </h1>
           <p className="banner-section__small-banner-paragraph">
             Empieza a explorar
@@ -39,7 +51,7 @@ export const BannerSection = () => {
           src={chullo}
           alt=""
         />
-      </div>
+      </button>
     </div>
   );
 };

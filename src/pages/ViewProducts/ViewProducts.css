@@ -4,7 +4,6 @@
   gap: 40px;
   padding: 0 clamp(4.5rem, 10vw, 12rem);
   margin-top: 40px;
-  /* border: 1px solid red; */
 }
 
 .view-products__title {

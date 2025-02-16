@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { URL_SERVER } from "../../utils/constants";
+import { ALL_OPTION, URL_SERVER } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
-import "./CategoryBox.css";
 import { useGet } from "../../hooks/useGet";
+import "./CategoryBox.css";
 
 const customStyles = {
   control: (defaultStyles, state) => ({
@@ -23,10 +23,13 @@ const customStyles = {
   }),
   option: (defaultStyles, state) => ({
     ...defaultStyles,
+    fontSize: "0.95rem",
+    cursor: "pointer",
   }),
   placeholder: (defaultStyles, state) => ({
     ...defaultStyles,
     color: "black",
+    fontSize: "0.95rem",
   }),
   singleValue: (defaultStyles, state) => ({
     ...defaultStyles,
@@ -52,7 +55,12 @@ export const CategoryBox = () => {
   const navigate = useNavigate();
 
   const handleSelectChange = (selectedOption) => {
-    navigate(`/products/${selectedOption.label}`);
+    const path =
+      selectedOption.label === ALL_OPTION
+        ? "/products"
+        : `/products/${selectedOption.label}`;
+
+    navigate(path);
   };
 
   useEffect(() => {
@@ -61,29 +69,34 @@ export const CategoryBox = () => {
         url: `${URL_SERVER}/categories`,
       });
 
-      setCategories(
-        response.map((category) => ({
+      setCategories([
+        { value: 0, label: ALL_OPTION },
+        ...response.map((category) => ({
           value: category.id,
           label: category.name,
-        }))
-      );
+        })),
+      ]);
     };
 
     handleCategories();
   }, []);
 
-  return loadingCategories ? (
-    <p> Cargando ... </p>
-  ) : errorCategories ? (
-    <p>{errorCategories}</p>
-  ) : (
-    responseCategories && (
+  if (loadingCategories) {
+    return <p>Cargando ...</p>;
+  }
+
+  if (errorCategories) {
+    return <p>{errorCategories}</p>;
+  }
+
+  if (responseCategories) {
+    return (
       <Select
         options={categories}
         placeholder="Categorías"
         styles={customStyles}
         onChange={handleSelectChange}
       />
-    )
-  );
+    );
+  }
 };

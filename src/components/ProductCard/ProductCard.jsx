@@ -3,15 +3,16 @@ import { FaCheckCircle } from "react-icons/fa";
 import { useMemo, useState } from "react";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
 import { shoppingCartToast } from "../../utils/notifications/toasts";
-import "./ProductCard.css";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import "./ProductCard.css";
 
 export const ProductCard = ({
   id,
   name,
   price,
   image,
-  description,
+  // description,
   category,
   artisanShop,
 }) => {
@@ -75,9 +76,9 @@ export const ProductCard = ({
         </button>
       </div>
       <div className="product-card__info">
-        <h3 className="product-card__name" onClick={goToProductDetails}>
+        <button className="product-card__name" onClick={goToProductDetails}>
           {name}
-        </h3>
+        </button>
         <p className="product-card__price">S/. {price}</p>
         <p className="product-card__artisan">
           Producto de{" "}
@@ -86,4 +87,15 @@ export const ProductCard = ({
       </div>
     </li>
   );
+};
+
+// El id debe ser de tipo number
+ProductCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  // description: PropTypes.string,
+  category: PropTypes.string.isRequired,
+  artisanShop: PropTypes.string.isRequired,
 };

@@ -9,7 +9,7 @@ export const Navbar = () => {
           <Link className="navbar__link">Historias de Impacto</Link>
         </li> */}
         <li className="navbar__item">
-          <Link to="/artisans" className="navbar__link">
+          <Link to="/artisans-shops" className="navbar__link">
             Tiendas de los Artesanos
           </Link>
         </li>

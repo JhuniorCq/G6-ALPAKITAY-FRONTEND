@@ -1,7 +1,8 @@
 import { RiDeleteBack2Fill } from "react-icons/ri";
-import "./ShoppingCartProduct.css";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
 import { shoppingCartToast } from "../../utils/notifications/toasts";
+import PropTypes from "prop-types";
+import "./ShoppingCartProduct.css";
 
 export const ShoppingCartProduct = ({ id, name, image, price, quantity }) => {
   const { removeProductCart, increaseProductCart, decreaseProductCart } =
@@ -54,4 +55,12 @@ export const ShoppingCartProduct = ({ id, name, image, price, quantity }) => {
       </div>
     </li>
   );
+};
+
+ShoppingCartProduct.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
 };

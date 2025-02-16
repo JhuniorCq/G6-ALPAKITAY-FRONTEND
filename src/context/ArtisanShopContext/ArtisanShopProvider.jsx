@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useGet } from "../../hooks/useGet";
 import { URL_SERVER } from "../../utils/constants";
 import { ArtisanShopContext } from "./ArtisanShopContext";
+import PropTypes from "prop-types";
 
 export const ArtisanShopProvider = ({ children }) => {
   const {
@@ -23,20 +24,27 @@ export const ArtisanShopProvider = ({ children }) => {
     }
   };
 
+  const providerValue = useMemo(
+    () => ({
+      responseArtisanShops,
+      loadingArtisanShops,
+      errorArtisanShops,
+      handleGetArtisanShops,
+    }),
+    [responseArtisanShops, loadingArtisanShops, errorArtisanShops]
+  );
+
   useEffect(() => {
     handleGetArtisanShops();
   }, []);
 
   return (
-    <ArtisanShopContext.Provider
-      value={{
-        responseArtisanShops,
-        loadingArtisanShops,
-        errorArtisanShops,
-        handleGetArtisanShops,
-      }}
-    >
+    <ArtisanShopContext.Provider value={providerValue}>
       {children}
     </ArtisanShopContext.Provider>
   );
+};
+
+ArtisanShopProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

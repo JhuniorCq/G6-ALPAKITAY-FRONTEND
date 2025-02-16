@@ -1,4 +1,5 @@
 import chullo from "../../assets/images/chullo.jpg";
+import PropTypes from "prop-types";
 import "./FeaturedProduct.css";
 
 export const FeaturedProduct = ({ name, price }) => {
@@ -8,7 +9,16 @@ export const FeaturedProduct = ({ name, price }) => {
       <div className="featured-product__info">
         <h3 className="feactured-product__name">{name}</h3>
         <p className="featured-product__price">S/. {price}</p>
+        <p>
+          Producto de{" "}
+          <span className="featured-product__name-artisan-shop">...</span>
+        </p>
       </div>
     </li>
   );
+};
+
+FeaturedProduct.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
 };

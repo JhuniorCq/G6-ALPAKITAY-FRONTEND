@@ -9,8 +9,18 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.header__logo {
+.header__logo-box {
+  height: 100%;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo {
+  height: 75%;
 }
 
 .header__search-box {

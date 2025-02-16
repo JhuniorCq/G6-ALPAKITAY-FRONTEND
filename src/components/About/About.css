@@ -1,12 +1,15 @@
 .about {
   padding: 60px clamp(4.5rem, 10vw, 12rem);
   background-color: #fffbd8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .about__title {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
   font-size: clamp(1.6rem, 3vw, 2rem);
 }
 
@@ -14,19 +17,32 @@
   width: 100%;
   display: flex;
   gap: 50px;
-  /* border: 1px solid blue; */
 }
 
 .about__info {
   width: 35%;
-  /* border: 1px solid red; */
 }
 
-.about__infot-title {
+.about__info-title {
   margin-bottom: 10px;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .about__info-text {
   font-size: clamp(0.9rem, 2vw, 0.95rem);
+}
+
+.about__button {
+  font-size: 1rem;
+  color: black;
+  background-color: transparent;
+  padding: 16px 24px;
+  border: 2px solid black;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+}
+
+.about__button:hover {
+  scale: 1.05;
 }

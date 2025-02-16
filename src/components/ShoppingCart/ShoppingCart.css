@@ -21,6 +21,7 @@
 .shopping-cart__box {
   width: 480px;
   height: 100vh;
+  font-size: 0.95rem;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
