@@ -1,0 +1,45 @@
+.category-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  width: auto;
+}
+
+.category-box__button {
+  font-size: 0.95rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.category-box__list {
+  padding: 0.5rem 0;
+  width: 300px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.category-box__item {
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+}
+
+.category-box__item:hover {
+  background-color: #f0f0f0;
+}
+
+.category-box__link {
+  color: black;
+  text-transform: capitalize;
+}

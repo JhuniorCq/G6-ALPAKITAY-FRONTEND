@@ -1,0 +1,84 @@
+.view-product {
+  /* width: 100%; */
+  display: flex;
+  gap: 100px;
+  /* padding: 0 clamp(4.5rem, 10vw, 12rem); */
+  margin: 0 auto;
+  /* margin-top: 40px; */
+  padding: 80px 0;
+  /* border: 1px solid blue; */
+}
+
+.view-product__image-box {
+  /* width: 50%; */
+  text-align: center;
+  /* border: 1px solid orange; */
+}
+
+.view-product__image {
+  width: 500px;
+  border-radius: 18px;
+}
+
+.view-product__info {
+  /* width: 50%; */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: 1px solid green; */
+}
+
+.view-product__stock-text {
+  color: var(--color-blood-red);
+  font-weight: 600;
+}
+
+/* .view-product__stock {
+} */
+
+.view-product__price {
+  color: var(--color-blood-green);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.view-product__name {
+  font-size: 2.3rem;
+}
+
+.view-product__artisan-text {
+  font-size: 0.9rem;
+  color: #595959;
+}
+
+.view-product__artisan-name {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.view-product__artisan-name:hover {
+  color: rgb(90, 0, 90);
+  font-weight: 500;
+}
+
+.view-product__description {
+  margin-top: 15px;
+}
+
+.view-product__add-button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.view-product__add-button:hover {
+  background-color: var(--color-dark-gray);
+}

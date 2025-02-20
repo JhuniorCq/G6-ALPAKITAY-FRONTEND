@@ -1,0 +1,18 @@
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 clamp(4.5rem, 10vw, 12rem);
+}
+
+.featured-products__title {
+  margin-bottom: 12px;
+}
+
+.featured-products__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}

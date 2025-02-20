@@ -1,0 +1,117 @@
+.shopping-cart__background {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.shopping-cart__background--show {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: auto;
+}
+
+.shopping-cart__box {
+  width: 480px;
+  height: 100vh;
+  font-size: 0.95rem;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+  margin-left: auto;
+  background-color: white;
+  transform: translateX(500px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.shopping-cart__box--show {
+  transform: translateX(0);
+}
+
+.shopping-cart__header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-soft-gray);
+}
+
+.shopping-cart__header-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-family-monserrat);
+}
+
+.shopping-cart__close-button {
+  color: var(--color-blood-red);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.shopping-cart__main {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-cart__empty-cart-text {
+  flex-grow: 1;
+  text-align: center;
+  align-content: center;
+}
+
+.shopping-cart__footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 0;
+  border-top: 2px solid var(--color-soft-gray);
+}
+
+.shopping-cart__total-cost-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-cart__total-cost {
+  font-family: var(--font-family-monserrat);
+  font-weight: 500;
+}
+
+.shopping-cart__clear-all-button {
+  color: var(--color-blood-red);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.shopping-cart__buy-button {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-monserrat);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.shopping-cart__buy-button:hover {
+  background-color: var(--color-dark-gray);
+}
