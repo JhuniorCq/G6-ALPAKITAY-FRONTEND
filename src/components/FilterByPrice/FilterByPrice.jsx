@@ -60,4 +60,5 @@ export const FilterByPrice = ({ setSelectedFilters, customStyles }) => {
 
 FilterByPrice.propTypes = {
   setSelectedFilters: PropTypes.func.isRequired,
+  customStyles: PropTypes.object.isRequired,
 };

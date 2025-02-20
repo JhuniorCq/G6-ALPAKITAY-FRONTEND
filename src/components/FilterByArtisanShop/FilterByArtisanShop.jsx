@@ -53,4 +53,5 @@ export const FilterByArtisanShop = ({ setSelectedFilters, customStyles }) => {
 
 FilterByArtisanShop.propTypes = {
   setSelectedFilters: PropTypes.func.isRequired,
+  customStyles: PropTypes.object.isRequired,
 };

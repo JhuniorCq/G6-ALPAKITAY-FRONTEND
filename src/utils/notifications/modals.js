@@ -7,6 +7,7 @@ export const modalConfirmationShoppingCart = ({
   confirmTitle,
   confirmText,
   confirmIcon,
+  removeAllProductsCart,
 }) => {
   Swal.fire({
     title: title,
@@ -25,6 +26,8 @@ export const modalConfirmationShoppingCart = ({
         icon: confirmIcon,
         confirmButtonColor: "#333330",
       });
+
+      removeAllProductsCart();
     }
   });
 };
