@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { ProductsContext } from "./ProductsContex";
 import { URL_SERVER } from "../../utils/constants";
 import { useGet } from "../../hooks/useGet";
@@ -14,29 +14,19 @@ export const ProductsProvider = ({ children }) => {
     loading: true,
   });
 
-  // Devuelve productos en base a la categoría
-  const handleGetProducts = async ({ queryParameter }) => {
-    const url = queryParameter
-      ? `${URL_SERVER}/products?category=${queryParameter}`
-      : `${URL_SERVER}/products`;
-
-    const data = await getProducts({
-      url,
-    });
-
-    return data;
-  };
-
   // Memoriza el objeto para evitar recreaciones innecesarias
   const providerValue = useMemo(
     () => ({
       responseProducts,
       loadingProducts,
       errorProducts,
-      handleGetProducts,
     }),
     [responseProducts, loadingProducts, errorProducts]
   );
+
+  useEffect(() => {
+    getProducts({ url: `${URL_SERVER}/products` });
+  }, []);
 
   return (
     <ProductsContext.Provider value={providerValue}>

@@ -8,12 +8,9 @@ import "./ViewProducts.css";
 
 export const ViewProducts = () => {
   const { category = null } = useParams();
-  const {
-    responseProducts,
-    loadingProducts,
-    errorProducts,
-    handleGetProducts,
-  } = useContextProducts();
+  const { responseProducts, loadingProducts, errorProducts } =
+    useContextProducts();
+  const [productsByCategory, setProductsByCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState(null);
   const [selectedFilters, setSelectedFilters] = useState({
     price: {
@@ -27,32 +24,40 @@ export const ViewProducts = () => {
   });
 
   useEffect(() => {
-    const getProducts = async () => {
-      const data = await handleGetProducts({ queryParameter: category });
-      console.log("Los productos de esta sección: ", data);
-      setFilteredProducts(data);
-    };
+    if (responseProducts) {
+      if (!category) {
+        setProductsByCategory(responseProducts);
+        setFilteredProducts(responseProducts);
+        return;
+      }
 
-    getProducts();
-  }, [category]);
+      const acceptedProducts = responseProducts.filter(
+        (product) => product.category === category
+      );
+
+      console.log("Productos por categoría: ", acceptedProducts);
+      setProductsByCategory(acceptedProducts);
+      setFilteredProducts(acceptedProducts);
+    }
+  }, [category, responseProducts]);
 
   // Filtros
   useEffect(() => {
-    if (responseProducts) {
+    if (responseProducts && filteredProducts) {
       console.log("Filtros seleccionados: ", selectedFilters);
 
       const priceOption = selectedFilters.price;
       const artisanShopOption = selectedFilters.artisanShop;
 
+      const isAllPrice = priceOption.label === ALL_OPTION;
+      const isAllArtisanShop = artisanShopOption.label === ALL_OPTION;
+
+      if (isAllPrice && isAllArtisanShop) {
+        return setFilteredProducts(productsByCategory);
+      }
+
       // Función que determina si un producto cumple con los filtros seleccionados
       const isProductAccepted = (product) => {
-        const isAllPrice = priceOption.label === ALL_OPTION;
-        const isAllArtisanShop = artisanShopOption.label === ALL_OPTION;
-
-        if (isAllPrice && isAllArtisanShop) {
-          return true;
-        }
-
         if (isAllArtisanShop) {
           return (
             product.price >= priceOption.min && product.price <= priceOption.max
@@ -71,7 +76,7 @@ export const ViewProducts = () => {
       };
 
       // Filtrar los productos usando la función
-      const acceptedProducts = responseProducts.filter(isProductAccepted);
+      const acceptedProducts = productsByCategory.filter(isProductAccepted);
 
       console.log("Productos filtrados: ", acceptedProducts);
 
@@ -90,28 +95,31 @@ export const ViewProducts = () => {
 
         {!loadingProducts && errorProducts && <p>{errorProducts}</p>}
 
-        {!loadingProducts && !errorProducts && filteredProducts && (
-          <>
-            {filteredProducts.length === 0 ? (
-              <p className="view-products__not-products">
-                No se encontraron productos
-              </p>
-            ) : (
-              filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  id={product.id}
-                  name={product.name}
-                  price={product.price}
-                  image={product.image}
-                  // description={product.description}
-                  category={product.category}
-                  artisanShop={product.artisanShop}
-                />
-              ))
-            )}
-          </>
-        )}
+        {!loadingProducts &&
+          !errorProducts &&
+          productsByCategory &&
+          filteredProducts && (
+            <>
+              {filteredProducts.length === 0 ? (
+                <p className="view-products__not-products">
+                  No se encontraron productos
+                </p>
+              ) : (
+                filteredProducts.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    id={product.id}
+                    name={product.name}
+                    price={product.price}
+                    image={product.image}
+                    // description={product.description}
+                    category={product.category}
+                    artisanShop={product.artisanShop}
+                  />
+                ))
+              )}
+            </>
+          )}
       </ul>
     </section>
   );

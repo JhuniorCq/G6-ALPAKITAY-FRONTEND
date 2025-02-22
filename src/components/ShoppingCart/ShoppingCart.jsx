@@ -13,7 +13,6 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
   const deleteAllProductsCart = () => {
     if (shoppingCart.length === 0) return;
 
-    removeAllProductsCart();
     modalConfirmationShoppingCart({
       title: "¿Estás seguro?",
       text: "Se eliminarán todos los productos del carrito",
@@ -21,6 +20,7 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
       confirmTitle: "Productos eliminados",
       confirmText: "El carrito de compras ha sido vaciado",
       confirmIcon: "success",
+      removeAllProductsCart,
     });
   };
 
