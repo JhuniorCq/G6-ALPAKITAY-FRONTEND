@@ -136,73 +136,85 @@
       "id": 1,
       "name": "Arte Andino Quispe",
       "artisan": "Juan Quispe",
-      "message": "Ponchos tejidos a mano con lana de alpaca, ideales para el frío."
+      "message": "Ponchos tejidos a mano con lana de alpaca, ideales para el frío.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 2,
       "name": "Creaciones Huamán",
       "artisan": "María Huamán",
-      "message": "Chullos coloridos y con diseños únicos inspirados en la tradición andina."
+      "message": "Chullos coloridos y con diseños únicos inspirados en la tradición andina.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 3,
       "name": "Tejidos Mamani",
       "artisan": "Rosa Mamani",
-      "message": "Mantas suaves y resistentes, tejidas con técnicas ancestrales."
+      "message": "Mantas suaves y resistentes, tejidas con técnicas ancestrales.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 4,
       "name": "Artesanías Quispe",
       "artisan": "Carlos Quispe",
-      "message": "Bufandas hechas con lana de alpaca, perfectas para cualquier ocasión."
+      "message": "Bufandas hechas con lana de alpaca, perfectas para cualquier ocasión.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 5,
       "name": "Tradición Condori",
       "artisan": "Elena Condori",
-      "message": "Tapices llenos de historia y cultura, hechos con técnicas milenarias."
+      "message": "Tapices llenos de historia y cultura, hechos con técnicas milenarias.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 6,
       "name": "Manos Andinas Taype",
       "artisan": "Miguel Taype",
-      "message": "Ponchos exclusivos, con diseños inspirados en la naturaleza andina."
+      "message": "Ponchos exclusivos, con diseños inspirados en la naturaleza andina.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 7,
       "name": "Diseños Ccahuana",
       "artisan": "Ana Ccahuana",
-      "message": "Chullos tejidos con amor y dedicación, cada uno con un diseño especial."
+      "message": "Chullos tejidos con amor y dedicación, cada uno con un diseño especial.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 8,
       "name": "Creaciones Apaza",
       "artisan": "Luis Apaza",
-      "message": "Mantas de alpaca tejidas con precisión y cuidado para tu comodidad."
+      "message": "Mantas de alpaca tejidas con precisión y cuidado para tu comodidad.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 9,
       "name": "Arte Textil Quispe",
       "artisan": "Roxana Quispe",
-      "message": "Bufandas elegantes y abrigadoras, perfectas para cualquier clima."
+      "message": "Bufandas elegantes y abrigadoras, perfectas para cualquier clima.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 10,
       "name": "Textiles Huanca",
       "artisan": "Pedro Huanca",
-      "message": "Tapices artesanales que cuentan historias de nuestra cultura."
+      "message": "Tapices artesanales que cuentan historias de nuestra cultura.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 11,
       "name": "Tierra Andina Callo",
       "artisan": "Juana Callo",
-      "message": "Mantas coloridas y cálidas, tejidas con lana 100% natural."
+      "message": "Mantas coloridas y cálidas, tejidas con lana 100% natural.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     },
     {
       "id": 12,
       "name": "Hilos de los Andes Mamani",
       "artisan": "Efraín Mamani",
-      "message": "Ponchos tejidos a mano, combinando tradición y modernidad."
+      "message": "Ponchos tejidos a mano, combinando tradición y modernidad.",
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
     }
   ],
   "categories": [
