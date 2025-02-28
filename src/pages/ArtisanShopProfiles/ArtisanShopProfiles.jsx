@@ -1,14 +1,11 @@
+import { useNavigate } from "react-router-dom"; 
 import { useContextArtisanShop } from "../../hooks/useContextArtisanShop";
 import "./ArtisanShopProfiles.css";
 
 export const ArtisanShopProfiles = () => {
   const { responseArtisanShops, loadingArtisanShops, errorArtisanShops } =
     useContextArtisanShop();
-
-  console.log(
-    "Perfiles de las tiendas de los artesanos: ",
-    responseArtisanShops
-  );
+  const navigate = useNavigate(); 
 
   if (loadingArtisanShops) {
     return <p>Cargando ...</p>;
@@ -36,7 +33,7 @@ export const ArtisanShopProfiles = () => {
             <p>{shop.message}</p>
             <button 
               className="ArtisanShopProfiles_button" 
-              onClick={() => navigate(`/tienda/${shop.id}`)}
+              onClick={() => navigate(`/artisans/${shop.id}`)} 
             >
               Ver Tienda
             </button>
@@ -46,3 +43,4 @@ export const ArtisanShopProfiles = () => {
     </section>
   );
 };
+
