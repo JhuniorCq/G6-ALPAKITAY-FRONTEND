@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home/Home";
 import { ViewProducts } from "../pages/ViewProducts/ViewProducts";
 import { ArtisanShopProfiles } from "../pages/ArtisanShopProfiles/ArtisanShopProfiles";
+import{ArtisanShop} from "../pages/ArtisanShop/ArtisanShop"
 import { ViewProduct } from "../pages/ViewProduct/ViewProduct";
 
 export const MyRoutes = () => {
@@ -13,6 +14,7 @@ export const MyRoutes = () => {
       </Route>
       <Route path="/products/:category/:id" element={<ViewProduct />} />
       <Route path="/artisans-shops" element={<ArtisanShopProfiles />} />
+      <Route path="/artisans/:id" element={<ArtisanShop />}></Route>
     </Routes>
   );
 };

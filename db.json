@@ -129,7 +129,39 @@
       "category": "tapices",
       "artisanShop": "Tradición Condori",
       "stockQuantity": 6
-    }    
+    },
+    {
+      "id": 14,
+      "name": "Chullo de Alpaca",
+      "price": 45,
+      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "artisanShop": "Creaciones Huamán",
+      "stockQuantity": 15
+    },
+    {
+      "id": 15,
+      "name": "Chullo de Alpaca",
+      "price": 45,
+      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "artisanShop": "Creaciones Huamán",
+      "stockQuantity": 15
+    },
+    {
+      "id": 16,
+      "name": "Chullo de Alpaca",
+      "price": 45,
+      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
+      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "category": "chullos",
+      "artisanShop": "Creaciones Huamán",
+      "stockQuantity": 15
+    }
+    
+    
   ],
   "artisanShops": [
     {
@@ -137,84 +169,210 @@
       "name": "Arte Andino Quispe",
       "artisan": "Juan Quispe",
       "message": "Ponchos tejidos a mano con lana de alpaca, ideales para el frío.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "10 Octubre 2021",
+      "facebook": "https://facebook.com/ArteAndinoQuispe",
+      "instagram": "https://instagram.com/ArteAndinoQuispe",
+      "youtube": "https://youtube.com/ArteAndinoQuispe",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 2,
       "name": "Creaciones Huamán",
       "artisan": "María Huamán",
       "message": "Chullos coloridos y con diseños únicos inspirados en la tradición andina.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "15 Julio 2020",
+      "totalProducts": 90,
+      "facebook": "https://facebook.com/CreacionesHuaman",
+      "instagram": "https://instagram.com/CreacionesHuaman",
+      "youtube": "https://youtube.com/CreacionesHuaman",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
+
     },
     {
       "id": 3,
       "name": "Tejidos Mamani",
       "artisan": "Rosa Mamani",
       "message": "Mantas suaves y resistentes, tejidas con técnicas ancestrales.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "23 Enero 2019",
+      "totalProducts": 75,
+      "facebook": "https://facebook.com/TejidosMamani",
+      "instagram": "https://instagram.com/TejidosMamani",
+      "youtube": "https://youtube.com/TejidosMamani",
+      "ownerImage": "https://source.unsplash.com/100x100/?woman,craft",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 4,
       "name": "Artesanías Quispe",
       "artisan": "Carlos Quispe",
       "message": "Bufandas hechas con lana de alpaca, perfectas para cualquier ocasión.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Miguel",
+      "department": "Lima",
+      "joinedDate": "5 Marzo 2020",
+      "totalProducts": 65,
+      "facebook": "https://facebook.com/ArtesaniasQuispe",
+      "instagram": "https://instagram.com/ArtesaniasQuispe",
+      "youtube": "https://youtube.com/ArtesaniasQuispe",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
+
     },
     {
       "id": 5,
       "name": "Tradición Condori",
       "artisan": "Elena Condori",
       "message": "Tapices llenos de historia y cultura, hechos con técnicas milenarias.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "12 Diciembre 2018",
+      "totalProducts": 80,
+      "facebook": "https://facebook.com/TradicionCondori",
+      "instagram": "https://instagram.com/TradicionCondori",
+      "youtube": "https://youtube.com/TradicionCondori",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 6,
       "name": "Manos Andinas Taype",
       "artisan": "Miguel Taype",
       "message": "Ponchos exclusivos, con diseños inspirados en la naturaleza andina.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+     "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "8 Septiembre 2021",
+      "totalProducts": 100,
+      "facebook": "https://facebook.com/ManosAndinasTaype",
+      "instagram": "https://instagram.com/ManosAndinasTaype",
+      "youtube": "https://youtube.com/ManosAndinasTaype",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg", 
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 7,
       "name": "Diseños Ccahuana",
       "artisan": "Ana Ccahuana",
       "message": "Chullos tejidos con amor y dedicación, cada uno con un diseño especial.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "2 Mayo 2019",
+      "totalProducts": 110,
+      "facebook": "https://facebook.com/DiseñosCcahuana",
+      "instagram": "https://instagram.com/DiseñosCcahuana",
+      "youtube": "https://youtube.com/DiseñosCcahuana",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 8,
       "name": "Creaciones Apaza",
       "artisan": "Luis Apaza",
       "message": "Mantas de alpaca tejidas con precisión y cuidado para tu comodidad.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "20 Noviembre 2022",
+      "totalProducts": 95,
+      "facebook": "https://facebook.com/CreacionesApaza",
+      "instagram": "https://instagram.com/CreacionesApaza",
+      "youtube": "https://youtube.com/CreacionesApaza",
+      "ownerName": "Luis Apaza",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 9,
       "name": "Arte Textil Quispe",
       "artisan": "Roxana Quispe",
       "message": "Bufandas elegantes y abrigadoras, perfectas para cualquier clima.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "20 Noviembre 2022",
+      "totalProducts": 95,
+      "facebook": "https://facebook.com/CreacionesApaza",
+      "instagram": "https://instagram.com/CreacionesApaza",
+      "youtube": "https://youtube.com/CreacionesApaza",
+      "ownerName": "Luis Apaza",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 10,
       "name": "Textiles Huanca",
       "artisan": "Pedro Huanca",
       "message": "Tapices artesanales que cuentan historias de nuestra cultura.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "20 Noviembre 2022",
+      "totalProducts": 95,
+      "facebook": "https://facebook.com/CreacionesApaza",
+      "instagram": "https://instagram.com/CreacionesApaza",
+      "youtube": "https://youtube.com/CreacionesApaza",
+      "ownerName": "Luis Apaza",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 11,
       "name": "Tierra Andina Callo",
       "artisan": "Juana Callo",
       "message": "Mantas coloridas y cálidas, tejidas con lana 100% natural.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "20 Noviembre 2022",
+      "totalProducts": 95,
+      "facebook": "https://facebook.com/CreacionesApaza",
+      "instagram": "https://instagram.com/CreacionesApaza",
+      "youtube": "https://youtube.com/CreacionesApaza",
+      "ownerName": "Luis Apaza",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     },
     {
       "id": 12,
       "name": "Hilos de los Andes Mamani",
       "artisan": "Efraín Mamani",
       "message": "Ponchos tejidos a mano, combinando tradición y modernidad.",
-      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg"
+      "image": "https://img.freepik.com/vector-premium/concepto-realista-logotipo-empresarial-diferentes-tipos-empresas_1286368-70511.jpg",
+      "bannerImage": "https://artesaniasdecolombia.com.co/document/noticias/Colombiamoda-artesanias-colombia-2021-1.jpg",
+      "district": "San Jerónimo",
+      "department": "Cusco",
+      "joinedDate": "20 Noviembre 2022",
+      "totalProducts": 95,
+      "facebook": "https://facebook.com/CreacionesApaza",
+      "instagram": "https://instagram.com/CreacionesApaza",
+      "youtube": "https://youtube.com/CreacionesApaza",
+      "ownerName": "Luis Apaza",
+      "ownerImage": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "history": "En un pequeño pueblo, Manuel tallaba molinillos de viento con la madera que encontraba en el bosque. Aprendió el oficio de su abuelo y cada pieza que creaba parecía bailar con la brisa. Un día, un comerciante vio su trabajo y lo llevó a la ciudad. Pronto, sus molinillos giraban en rincones lejanos, pero Manuel nunca olvidó sus raíces. Cada año, en la feria del pueblo, regalaba uno a cada niño, para que el viento siguiera contando historias. "
     }
   ],
   "categories": [
