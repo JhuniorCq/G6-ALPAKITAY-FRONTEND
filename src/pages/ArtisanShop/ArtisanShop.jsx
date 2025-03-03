@@ -10,12 +10,17 @@ export const ArtisanShop = () => {
   const { responseProducts, loadingProducts, errorProducts } =
     useContextProducts();
   const { id } = useParams();
-
-  const artisanShop = responseArtisanShops
-  ? responseArtisanShops.find((shop) => shop.id === parseInt(id))
-  : null;
-
   const [expanded, setExpanded] = useState(false);
+
+  if (!responseArtisanShops || responseArtisanShops.length === 0) {
+    return <p>Cargando tiendas...</p>;
+  }
+  const artisanShop = responseArtisanShops
+    ? responseArtisanShops.find((shop) => shop.id.toString() === id)
+    : null;
+
+  console.log("responseArtisanShops:", responseArtisanShops);
+  console.log("ID recibido:", id);
 
   const words = artisanShop?.history ? artisanShop.history.split(" ") : [];
   const previewText =
@@ -114,7 +119,11 @@ export const ArtisanShop = () => {
           <div className="products-list">
             {filteredProducts.map((product) => (
               <div key={product.id} className="product-card">
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-image"
+                />
                 <h4 className="product-name">{product.name}</h4>
                 <p className="product-price">Precio: {product.price}</p>
               </div>
@@ -125,4 +134,3 @@ export const ArtisanShop = () => {
     </section>
   );
 };
-
