@@ -396,5 +396,30 @@
       "id": 5,
       "name": "tapices"
     }
-  ]
+  ],
+  "shippingAndPaymentOptions": {
+    "shippingOptions": [
+      {
+        "id": 1,
+        "name": "agencia"
+      },
+      {
+        "id": 2,
+        "name": "recojo"
+      }
+    ],
+    "paymentOptions": [
+      {
+        "id": 1,
+        "name": "paypal",
+        "message":
+          "Después de hacer clic en “Pagar ahora”, serás redirigido a Paypal para completar tu compra de forma segura."
+      },
+      {
+        "id": 2,
+        "name": "yape",
+        "message": "El número aparecerá después de hacer clic en “Finalizar pedido”."
+      }
+    ]
+  }
 }

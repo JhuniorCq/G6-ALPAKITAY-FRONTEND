@@ -1,8 +1,13 @@
 .order-summary {
   width: 100%;
+}
+
+.order-summary__product-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 40px;
   /* border: 1px solid red; */
 }
 
@@ -12,7 +17,6 @@
 }
 
 .order-summary__product {
-  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
   gap: 20px;
@@ -51,7 +55,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: green; */
 }
 
 .order-summary__name {
@@ -65,4 +68,44 @@
 }
 
 .order-summary__price {
+}
+
+.order-summary__cost-box {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-summary__cost-box > * {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary__subtotal-cost-box {
+}
+
+.order-summary__shipping-cost-box {
+}
+
+.order-summary__total-cost-box {
+  margin-top: 15px;
+}
+
+.order-summary__total-cost-box p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.order-summary__total-cost {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-summary__currency-code {
+  font-size: 0.9rem;
+  color: gray;
 }

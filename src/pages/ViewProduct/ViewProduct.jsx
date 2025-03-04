@@ -19,48 +19,47 @@ export const ViewProduct = () => {
     getProduct({ url: `${URL_SERVER}/products/${id}` });
   }, []);
 
-  return loadingProduct ? (
-    <p>Cargando ...</p>
-  ) : errorProduct ? (
-    <p>{errorProduct}</p>
-  ) : (
-    responseProduct && (
-      <>
-        <section className="view-product">
-          <div className="view-product__image-box">
-            <img
-              src={responseProduct.image}
-              alt={responseProduct.name}
-              className="view-product__image"
-            />
-          </div>
-          <div className="view-product__info">
-            <p className="view-product__stock-text">
-              ¡Stock limitado! Solo quedan{" "}
-              <span className="view-product__stock">
-                {responseProduct.stockQuantity}
-              </span>{" "}
-              unidades
-            </p>
-            <p className="view-product__price">
-              S/. {responseProduct.price.toFixed(2)}
-            </p>
-            <h1 className="view-product__name">{responseProduct.name}</h1>
-            <p className="view-product__artisan-text">
-              Producto fabricado por{" "}
-              <span className="view-product__artisan-name">
-                {responseProduct.artisanShop}
-              </span>
-            </p>
-            <p className="view-product__description">
-              {responseProduct.description}
-            </p>
-            <button className="view-product__add-button">
-              Agregar al carrito
-            </button>
-          </div>
-        </section>
-      </>
-    )
-  );
+  if (loadingProduct) return <p>Cargando ...</p>;
+
+  if (errorProduct) return <p>{errorProduct}</p>;
+
+  if (responseProduct) {
+    return (
+      <section className="view-product">
+        <div className="view-product__image-box">
+          <img
+            src={responseProduct.image}
+            alt={responseProduct.name}
+            className="view-product__image"
+          />
+        </div>
+        <div className="view-product__info">
+          <p className="view-product__stock-text">
+            ¡Stock limitado! Solo quedan{" "}
+            <span className="view-product__stock">
+              {responseProduct.stockQuantity}
+            </span>{" "}
+            unidades
+          </p>
+          <p className="view-product__price">
+            S/. {responseProduct.price.toFixed(2)}
+          </p>
+          <h1 className="view-product__name">{responseProduct.name}</h1>
+          <p className="view-product__artisan-text">
+            Producto fabricado por{" "}
+            <span className="view-product__artisan-name">
+              {responseProduct.artisanShop}
+            </span>
+            {/* Este artisanShop tal vez lo quito, ya que el back no me lo enviará */}
+          </p>
+          <p className="view-product__description">
+            {responseProduct.description}
+          </p>
+          <button className="view-product__add-button">
+            Agregar al carrito
+          </button>
+        </div>
+      </section>
+    );
+  }
 };

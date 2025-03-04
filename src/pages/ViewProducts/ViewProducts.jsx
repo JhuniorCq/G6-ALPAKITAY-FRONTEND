@@ -78,8 +78,6 @@ export const ViewProducts = () => {
       // Filtrar los productos usando la función
       const acceptedProducts = productsByCategory.filter(isProductAccepted);
 
-      console.log("Productos filtrados: ", acceptedProducts);
-
       setFilteredProducts(acceptedProducts);
     }
   }, [selectedFilters, responseProducts]);

@@ -1,11 +1,22 @@
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
+import { calculateTotalCost, quantityOfItems } from "../../utils/logic";
+import PropTypes from "prop-types";
+import { useContextMethods } from "../../hooks/useContextMethods";
+import { useMemo } from "react";
+import { SHIPPING_COST_AGENCY } from "../../utils/constants";
 import "./OrderSummary.css";
 
-export const OrderSummary = () => {
+export const OrderSummary = ({ currentShippingMethod }) => {
   const { shoppingCart } = useContextShoppingCart();
+  const { responseMethods, loadingMethods, errorMethods } = useContextMethods();
+  const shippingIsAgency = useMemo(
+    () => currentShippingMethod === responseMethods.shippingOptions[0].name,
+    [currentShippingMethod, responseMethods]
+  );
+
   return (
-    <>
-      <ul className="order-summary">
+    <div className="order-summary">
+      <ul className="order-summary__product-list">
         {shoppingCart.length === 0 ? (
           <li className="order-summary__empty-cart-message">
             No existen productos en el carrito
@@ -36,7 +47,45 @@ export const OrderSummary = () => {
           ))
         )}
       </ul>
-      {/* <pre>{JSON.stringify(shoppingCart, null, 2)}</pre> */}
-    </>
+      <div className="order-summary__cost-box">
+        {loadingMethods && <p>Cargando ...</p>}
+
+        {!loadingMethods && errorMethods && <p>{errorMethods}</p>}
+
+        {!loadingMethods && !errorMethods && responseMethods && (
+          <>
+            <div className="order-summary__subtotal-cost-box">
+              <p>Subtotal ({quantityOfItems(shoppingCart)} items)</p>
+              <p>S/. {calculateTotalCost(shoppingCart).toFixed(2)}</p>
+            </div>
+            <div className="order-summary__shipping-cost-box">
+              <p>Costo de envío</p>
+              <p>
+                {shippingIsAgency
+                  ? `S/. ${SHIPPING_COST_AGENCY.toFixed(2)}`
+                  : "FREE"}
+              </p>
+            </div>
+            <div className="order-summary__total-cost-box">
+              <p>TOTAL</p>
+              <div className="order-summary__total-cost">
+                <span className="order-summary__currency-code">PEN</span>
+                <p>
+                  S/.{" "}
+                  {(
+                    calculateTotalCost(shoppingCart) +
+                    (shippingIsAgency ? SHIPPING_COST_AGENCY : 0)
+                  ).toFixed(2)}
+                </p>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
+};
+
+OrderSummary.propTypes = {
+  currentShippingMethod: PropTypes.string.isRequired,
 };

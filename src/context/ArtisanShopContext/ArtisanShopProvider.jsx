@@ -17,7 +17,7 @@ export const ArtisanShopProvider = ({ children }) => {
   const handleGetArtisanShops = async () => {
     try {
       const data = await getArtisanShops({ url: `${URL_SERVER}/artisanShops` });
-      console.log("ArtisanShopProvider: ", data);
+
       return data;
     } catch (error) {
       console.error(error.message);

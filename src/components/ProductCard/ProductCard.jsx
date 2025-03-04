@@ -83,6 +83,7 @@ export const ProductCard = ({
         <p className="product-card__artisan">
           Producto de{" "}
           <span className="product-card__artisan-name">{artisanShop}</span>
+          {/* artisanShop lo puedo quitar, ya que el back no me dará ese dato */}
         </p>
       </div>
     </li>

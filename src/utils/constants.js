@@ -11,3 +11,5 @@ export const SHOPPING_CART_ACTIONS = {
 };
 
 export const CART_KEY_SESSION_STORAGE = "shoppingCart";
+
+export const SHIPPING_COST_AGENCY = 9;
