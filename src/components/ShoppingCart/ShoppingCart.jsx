@@ -6,9 +6,11 @@ import { calculateTotalCost, quantityOfItems } from "../../utils/logic";
 import { modalConfirmationShoppingCart } from "../../utils/notifications/modals";
 import PropTypes from "prop-types";
 import "./ShoppingCart.css";
+import { useNavigate } from "react-router-dom";
 
 export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
   const { shoppingCart, removeAllProductsCart } = useContextShoppingCart();
+  const navigate = useNavigate();
 
   const deleteAllProductsCart = () => {
     if (shoppingCart.length === 0) return;
@@ -22,6 +24,12 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
       confirmIcon: "success",
       removeAllProductsCart,
     });
+  };
+
+  const goToPaymentForm = () => {
+    if (shoppingCart.length === 0) return;
+
+    navigate("/payment-form");
   };
 
   return (
@@ -80,7 +88,12 @@ export const ShoppingCart = ({ shoppingCartOpened, closeShoppingCart }) => {
               onClick={deleteAllProductsCart}
             />
           </div>
-          <button className="shopping-cart__buy-button">Realizar compra</button>
+          <button
+            className="shopping-cart__buy-button"
+            onClick={goToPaymentForm}
+          >
+            Realizar compra
+          </button>
         </div>
       </div>
     </div>

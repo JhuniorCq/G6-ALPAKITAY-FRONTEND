@@ -1,0 +1,12 @@
+.agency-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.agency-box__error-message {
+  width: 100%;
+  font-size: 0.8rem;
+  padding-left: 3px;
+}

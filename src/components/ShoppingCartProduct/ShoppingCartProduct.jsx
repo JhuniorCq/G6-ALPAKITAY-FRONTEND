@@ -57,8 +57,9 @@ export const ShoppingCartProduct = ({ id, name, image, price, quantity }) => {
   );
 };
 
+// El id debe ser de tipo number
 ShoppingCartProduct.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,

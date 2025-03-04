@@ -4,7 +4,9 @@
   --color-blood-red: #dc3545;
   --color-blood-green: #0f743b;
   --color-soft-gray: rgb(220, 220, 220);
+  --color-fog-gray: #d1d1d1;
   --color-dark-gray: #333333;
+  --color-error: #b22222;
 }
 
 * {
@@ -20,4 +22,8 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.error-color {
+  color: var(--color-error);
 }

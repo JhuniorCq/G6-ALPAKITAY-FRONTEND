@@ -1,0 +1,22 @@
+.form-input-options {
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-options__label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border: 1px solid var(--color-fog-gray);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.form-input-options__text {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}

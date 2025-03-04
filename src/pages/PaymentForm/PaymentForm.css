@@ -1,0 +1,77 @@
+.payment-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.payment-form__form-box {
+  padding: 50px 70px 50px 12%;
+  flex-grow: 1;
+  max-width: 50%;
+  background-color: rgb(172, 214, 217);
+}
+
+.payment-form__header {
+  /* border: 1px solid orange; */
+  margin-bottom: 12px;
+}
+
+.payment-form__back-button {
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.payment-form__back-icon {
+  font-size: 1.3rem;
+}
+
+.payment-form__title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.payment-form__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.payment-form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-form__section-title {
+  margin-bottom: 8px;
+}
+
+.payment-form__order-summary-box {
+  padding: 50px 12% 50px 70px;
+  flex-grow: 1;
+  max-width: 50%;
+  background-color: #efefef;
+}
+
+.payment-form__submit-button {
+  width: 100%;
+  padding: 16px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.payment-form__submit-button:hover {
+  background-color: var(--color-dark-gray);
+}
