@@ -1,4 +1,5 @@
 export const URL_SERVER = "http://localhost:3000";
+export const URL_BACKEND = "http://localhost:9090";
 
 export const ALL_OPTION = "Todo";
 

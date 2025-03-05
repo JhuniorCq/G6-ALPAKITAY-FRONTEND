@@ -25,7 +25,7 @@ export const OrderSummary = ({ orderedProducts, shippingMethod }) => {
             <li key={product.id} className="order-summary__product">
               <div className="order-summary__image-box">
                 <img
-                  src={product.image}
+                  src={product.imageUrl}
                   alt={product.name}
                   className="order-summary__image"
                 />
@@ -37,7 +37,7 @@ export const OrderSummary = ({ orderedProducts, shippingMethod }) => {
                 <div>
                   <h3 className="order-summary__name">{product.name}</h3>
                   <p className="order-summary__artisan-shop">
-                    {product.artisanShop}
+                    {product.artisanShop ?? "-"}
                   </p>
                 </div>
                 <p className="order-summary__price">S/. {product.price}</p>

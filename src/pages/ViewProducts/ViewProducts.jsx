@@ -32,10 +32,9 @@ export const ViewProducts = () => {
       }
 
       const acceptedProducts = responseProducts.filter(
-        (product) => product.category === category
+        (product) => product.productCategory === category
       );
 
-      console.log("Productos por categoría: ", acceptedProducts);
       setProductsByCategory(acceptedProducts);
       setFilteredProducts(acceptedProducts);
     }
@@ -44,8 +43,6 @@ export const ViewProducts = () => {
   // Filtros
   useEffect(() => {
     if (responseProducts && filteredProducts) {
-      console.log("Filtros seleccionados: ", selectedFilters);
-
       const priceOption = selectedFilters.price;
       const artisanShopOption = selectedFilters.artisanShop;
 
@@ -75,7 +72,6 @@ export const ViewProducts = () => {
         );
       };
 
-      // Filtrar los productos usando la función
       const acceptedProducts = productsByCategory.filter(isProductAccepted);
 
       setFilteredProducts(acceptedProducts);
@@ -109,8 +105,8 @@ export const ViewProducts = () => {
                     id={product.id}
                     name={product.name}
                     price={product.price}
-                    image={product.image}
-                    category={product.category}
+                    imageUrl={product.imageUrl}
+                    category={product.productCategory}
                     artisanShop={product.artisanShop}
                   />
                 ))

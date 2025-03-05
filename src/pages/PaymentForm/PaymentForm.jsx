@@ -27,7 +27,6 @@ export const PaymentForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    getValues,
     control,
     watch,
     unregister,
@@ -39,10 +38,9 @@ export const PaymentForm = () => {
     },
   });
 
-  const currentShippingMethod = getValues("shipping");
+  const currentShippingMethod = watch("shipping");
 
   const onSubmit = (data) => {
-    console.log("Enviando datos al servidor: ", data);
     placeOrderToast({
       icon: "success",
       position: "top-end",
@@ -60,7 +58,6 @@ export const PaymentForm = () => {
   };
 
   const onError = (errors) => {
-    console.log("Errores en el formulario: ", errors);
     placeOrderToast({
       icon: "error",
       position: "top-end",
@@ -176,7 +173,17 @@ export const PaymentForm = () => {
               {currentShippingMethod === shippingMethods[0].name ? (
                 <AgencyBox name="agency" control={control} errors={errors} />
               ) : (
-                <div>Sucursal de Alpakitay ...</div>
+                <div className="payment-form__pickup-message-box">
+                  <div>
+                    <h3 className="payment-form__pickup-message-title">
+                      Sucursal de Alpakitay
+                    </h3>
+                    <p className="payment-form__pickup-message-address">
+                      Avenida Emilio Cavenecia 151, Miraflores, Lima, PE-LMA
+                    </p>
+                  </div>
+                  <p>GRATIS</p>
+                </div>
               )}
             </section>
 
@@ -194,8 +201,6 @@ export const PaymentForm = () => {
             <button className="payment-form__submit-button" type="submit">
               Finalizar pedido
             </button>
-
-            <pre>{JSON.stringify(watch(), null, 2)}</pre>
           </form>
         </div>
 

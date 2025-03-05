@@ -58,8 +58,6 @@ export const OrderDetails = () => {
     );
   }
 
-  console.log(responseMethods);
-
   if (loadingMethods) return <p>Cargando ...</p>;
 
   if (errorMethods) return <p>{errorMethods}</p>;

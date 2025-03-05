@@ -37,7 +37,6 @@ export const FormInput = ({
   );
 };
 
-// El id debe ser de tipo number
 FormInput.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,

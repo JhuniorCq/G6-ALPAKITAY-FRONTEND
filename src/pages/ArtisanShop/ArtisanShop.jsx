@@ -19,9 +19,6 @@ export const ArtisanShop = () => {
     ? responseArtisanShops.find((shop) => shop.id.toString() === id)
     : null;
 
-  console.log("responseArtisanShops:", responseArtisanShops);
-  console.log("ID recibido:", id);
-
   const words = artisanShop?.history ? artisanShop.history.split(" ") : [];
   const previewText =
     words.slice(0, 30).join(" ") + (words.length > 30 ? "..." : "");
@@ -120,7 +117,7 @@ export const ArtisanShop = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="product-card">
                 <img
-                  src={product.image}
+                  src={product.imageUrl}
                   alt={product.name}
                   className="product-image"
                 />
@@ -131,9 +128,7 @@ export const ArtisanShop = () => {
           </div>
         </div>
       ) : (
-        <p>
-          Esta tienda aún no tiene productos disponibles.
-        </p>
+        <p>Esta tienda aún no tiene productos disponibles.</p>
       )}
     </section>
   );

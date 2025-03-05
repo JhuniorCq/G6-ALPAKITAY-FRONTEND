@@ -11,14 +11,13 @@ export const ProductCard = ({
   id,
   name,
   price,
-  image,
+  imageUrl,
   category,
   artisanShop,
 }) => {
   const { shoppingCart, addProductCart } = useContextShoppingCart();
   const [showAddCartButton, setShowAddCartButton] = useState(false);
   const navigate = useNavigate();
-
   const existingProductCart = useMemo(
     () => shoppingCart.some((product) => product.id === id),
     [shoppingCart]
@@ -37,7 +36,7 @@ export const ProductCard = ({
       return;
     }
 
-    addProductCart({ id, name, price, image, artisanShop });
+    addProductCart({ id, name, price, imageUrl, artisanShop });
 
     shoppingCartToast({
       title: "Se ha agregado el producto al carrito",
@@ -58,7 +57,7 @@ export const ProductCard = ({
         onMouseLeave={() => setShowAddCartButton(false)}
         onClick={goToProductDetails}
       >
-        <img src={image} alt="" className="product-card__image" />
+        <img src={imageUrl} alt="" className="product-card__image" />
         <button
           className={
             showAddCartButton
@@ -92,10 +91,10 @@ export const ProductCard = ({
 
 // El id debe ser de tipo number
 ProductCard.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  artisanShop: PropTypes.string.isRequired,
+  artisanShop: PropTypes.string,
 };

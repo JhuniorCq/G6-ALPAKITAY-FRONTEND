@@ -10,6 +10,7 @@ export const FormInputOptions = ({ options, name, register, errors }) => {
         <li key={option.id} className="form-input-options__option">
           <label className="form-input-options__label">
             <input
+              className="form-input-options__input"
               type="radio"
               name={name}
               value={option.name}

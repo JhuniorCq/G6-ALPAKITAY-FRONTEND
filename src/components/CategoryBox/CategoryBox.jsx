@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ALL_OPTION, URL_SERVER } from "../../utils/constants";
+import { ALL_OPTION, URL_BACKEND, URL_SERVER } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import { useGet } from "../../hooks/useGet";
@@ -66,7 +66,7 @@ export const CategoryBox = () => {
   useEffect(() => {
     const handleCategories = async () => {
       const response = await getCategories({
-        url: `${URL_SERVER}/categories`,
+        url: `${URL_BACKEND}/api/categories/all`,
       });
 
       setCategories([

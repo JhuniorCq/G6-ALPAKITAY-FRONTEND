@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { useGet } from "../../hooks/useGet";
-import { URL_SERVER } from "../../utils/constants";
+import { URL_BACKEND, URL_SERVER } from "../../utils/constants";
 import "./ViewProduct.css";
 import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
 import { shoppingCartToast } from "../../utils/notifications/toasts";
@@ -19,7 +19,7 @@ export const ViewProduct = () => {
   });
 
   const existingProductCart = useMemo(
-    () => shoppingCart.some((product) => product.id === id),
+    () => shoppingCart.some((product) => product.id === Number(id)),
     [shoppingCart]
   );
 
@@ -44,7 +44,7 @@ export const ViewProduct = () => {
   };
 
   useEffect(() => {
-    getProduct({ url: `${URL_SERVER}/products/${id}` });
+    getProduct({ url: `${URL_BACKEND}/api/products/${id}` });
   }, []);
 
   if (loadingProduct) return <p>Cargando ...</p>;
@@ -56,7 +56,7 @@ export const ViewProduct = () => {
       <section className="view-product">
         <div className="view-product__image-box">
           <img
-            src={responseProduct.image}
+            src={responseProduct.imageUrl}
             alt={responseProduct.name}
             className="view-product__image"
           />

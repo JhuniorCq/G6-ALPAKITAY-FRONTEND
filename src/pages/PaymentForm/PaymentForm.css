@@ -7,7 +7,7 @@
   padding: 50px 70px 50px 12%;
   flex-grow: 1;
   max-width: 50%;
-  background-color: rgb(172, 214, 217);
+  background-color: white;
 }
 
 .payment-form__header {
@@ -49,6 +49,27 @@
 
 .payment-form__section-title {
   margin-bottom: 8px;
+}
+
+.payment-form__pickup-message-box {
+  border: 1px solid var(--color-fog-gray);
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment-form__pickup-message-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.payment-form__pickup-message-address {
+  font-size: 0.85rem;
+  color: rgb(134, 134, 134);
 }
 
 .payment-form__order-summary-box {
