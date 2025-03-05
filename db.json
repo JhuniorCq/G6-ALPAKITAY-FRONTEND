@@ -5,8 +5,8 @@
       "name": "Poncho Andino",
       "price": 120,
       "description": "Poncho artesanal tejido a mano con lana de alpaca. Su diseño representa la tradición andina con colores vibrantes y patrones geométricos únicos. Ideal para climas fríos, su suavidad y calidez brindan un confort excepcional. Perfecto para quienes buscan autenticidad y calidad en una prenda de vestir.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "ponchos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "ponchos",
       "artisanShop": "Artesanías Quispe",
       "stockQuantity": 10
     },
@@ -15,8 +15,8 @@
       "name": "Chullo de Alpaca",
       "price": 45,
       "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "chullos",
       "artisanShop": "Creaciones Huamán",
       "stockQuantity": 15
     },
@@ -25,8 +25,8 @@
       "name": "Manta Cusqueña",
       "price": 85,
       "description": "Manta colorida tejida con patrones andinos. Inspirada en las tradiciones textiles del Cusco, esta manta combina tonos vibrantes con un tejido de alta calidad. Su versatilidad permite usarla como cobertor, decoración o accesorio para viajes. Elaborada con técnicas ancestrales que garantizan durabilidad y suavidad.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "mantas",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "mantas",
       "artisanShop": "Tejidos Mamani",
       "stockQuantity": 8
     },
@@ -35,8 +35,8 @@
       "name": "Bufanda de Baby Alpaca",
       "price": 65,
       "description": "Bufanda suave y ligera, perfecta para el invierno. Su confección con lana de baby alpaca la hace extremadamente cálida y delicada con la piel. Ideal para quienes buscan un accesorio elegante y funcional, esta bufanda combina sofisticación con la comodidad de las fibras naturales.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "bufandas",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "bufandas",
       "artisanShop": "Arte Andino Quispe",
       "stockQuantity": 12
     },
@@ -45,8 +45,8 @@
       "name": "Tapiz de los Andes",
       "price": 150,
       "description": "Tapiz decorativo con paisajes andinos, tejido a mano. Cada pieza es una obra de arte que captura la esencia de los Andes con detalles minuciosos. Hecho con fibras naturales y tintes ecológicos, este tapiz es ideal para decorar cualquier espacio con un toque cultural y artesanal.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "tapices",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "tapices",
       "artisanShop": "Arte Textil Quispe",
       "stockQuantity": 7
     },
@@ -55,8 +55,8 @@
       "name": "Poncho de Alpaca Clásico",
       "price": 130,
       "description": "Poncho tradicional hecho con lana de alpaca de alta calidad. Diseñado para quienes buscan una prenda duradera y abrigadora, este poncho presenta un tejido denso que aísla del frío sin perder ligereza. Sus acabados artesanales lo convierten en una pieza única y exclusiva.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "ponchos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "ponchos",
       "artisanShop": "Textiles Huanca",
       "stockQuantity": 9
     },
@@ -65,8 +65,8 @@
       "name": "Poncho con Capucha",
       "price": 140,
       "description": "Poncho moderno con capucha, ideal para climas fríos. Combina el estilo tradicional con un diseño contemporáneo que añade mayor funcionalidad. Su capucha protege contra el viento y la lluvia ligera, mientras que su tejido de alpaca garantiza calidez y comodidad.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "ponchos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "ponchos",
       "artisanShop": "Diseños Ccahuana",
       "stockQuantity": 6
     },
@@ -75,8 +75,8 @@
       "name": "Chullo Andino Multicolor",
       "price": 50,
       "description": "Chullo tejido a mano con colores vivos y patrones tradicionales. Este accesorio es un reflejo de la identidad cultural andina, ideal para quienes desean lucir un diseño auténtico. Su confección artesanal y fibras naturales aseguran resistencia y suavidad en su uso diario.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "chullos",
       "artisanShop": "Creaciones Apaza",
       "stockQuantity": 14
     },
@@ -85,8 +85,8 @@
       "name": "Chullo de Oveja Natural",
       "price": 40,
       "description": "Chullo tejido con lana de oveja sin teñir, diseño rústico. Su color natural y textura única lo convierten en una pieza especial para quienes buscan un estilo minimalista y ecológico. Además, su tejido grueso proporciona gran aislamiento térmico.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "chullos",
       "artisanShop": "Tierra Andina Callo",
       "stockQuantity": 11
     },
@@ -95,73 +95,11 @@
       "name": "Manta de Alpaca Fina",
       "price": 100,
       "description": "Manta extra suave tejida con lana de alpaca fina. Su acabado premium la hace ideal para climas fríos, proporcionando una calidez excepcional. Perfecta para uso en el hogar, viajes o como regalo especial por su calidad superior.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "mantas",
+      "imageUrl": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
+      "productCategory": "mantas",
       "artisanShop": "Creaciones Huamán",
       "stockQuantity": 5
-    },
-    {
-      "id": 11,
-      "name": "Bufanda Clásica de Alpaca",
-      "price": 55,
-      "description": "Bufanda tejida a mano con lana de alpaca de alta calidad. Su diseño atemporal y textura suave la hacen perfecta para cualquier ocasión. Proporciona abrigo sin ser pesada, lo que la convierte en una prenda versátil y duradera.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "bufandas",
-      "artisanShop": "Hilos de los Andes Mamani",
-      "stockQuantity": 13
-    },
-    {
-      "id": 12,
-      "name": "Tapiz de Llamas",
-      "price": 180,
-      "description": "Tapiz artesanal con figuras de llamas andinas, colores vibrantes. Ideal para decorar espacios con un toque cultural y artístico. Hecho con lana teñida de forma natural, cada tapiz es una pieza única que representa la fauna y tradición andina.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "tapices",
-      "artisanShop": "MManos Andinas Taype",
-      "stockQuantity": 4
-    },
-    {
-      "id": 13,
-      "name": "Tapiz de Alpacas",
-      "price": 195,
-      "description": "Tapiz artesanal tejido a mano con figuras de alpacas andinas, representando la vida en los Andes. Cada pieza está elaborada con lana natural y teñida con pigmentos ecológicos, lo que le otorga colores vibrantes y duraderos. Su meticuloso diseño refleja la tradición textil de generaciones de artesanos, convirtiéndolo en una obra única para decorar cualquier espacio con un toque cultural auténtico. Ideal para quienes buscan arte andino de alta calidad y significado.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "tapices",
-      "artisanShop": "Tradición Condori",
-      "stockQuantity": 6
-    },
-    {
-      "id": 14,
-      "name": "Chullo de Alpaca",
-      "price": 45,
-      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
-      "artisanShop": "Creaciones Huamán",
-      "stockQuantity": 15
-    },
-    {
-      "id": 15,
-      "name": "Chullo de Alpaca",
-      "price": 45,
-      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
-      "artisanShop": "Creaciones Huamán",
-      "stockQuantity": 15
-    },
-    {
-      "id": 16,
-      "name": "Chullo de Alpaca",
-      "price": 45,
-      "description": "Chullo tradicional con orejeras, hecho con lana de alpaca. Este accesorio emblemático de la cultura andina ofrece una excelente protección contra el frío, con un tejido denso que retiene el calor corporal. Disponible en múltiples colores y estilos, es un complemento perfecto para cualquier atuendo invernal.",
-      "image": "https://www.tienda-peruana.com/1923/manta-macha-peruana-rosa-aprox-110x220cm.jpg",
-      "category": "chullos",
-      "artisanShop": "Creaciones Huamán",
-      "stockQuantity": 15
     }
-    
-    
   ],
   "artisanShops": [
     {
@@ -396,5 +334,30 @@
       "id": 5,
       "name": "tapices"
     }
-  ]
+  ],
+  "shippingAndPaymentOptions": {
+    "shippingOptions": [
+      {
+        "id": 1,
+        "name": "agencia"
+      },
+      {
+        "id": 2,
+        "name": "recojo"
+      }
+    ],
+    "paymentOptions": [
+      {
+        "id": 1,
+        "name": "paypal",
+        "message":
+          "Después de hacer clic en “Pagar ahora”, serás redirigido a Paypal para completar tu compra de forma segura."
+      },
+      {
+        "id": 2,
+        "name": "yape",
+        "message": "El número aparecerá después de hacer clic en “Finalizar pedido”."
+      }
+    ]
+  }
 }

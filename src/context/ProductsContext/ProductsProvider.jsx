@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { ProductsContext } from "./ProductsContex";
-import { URL_SERVER } from "../../utils/constants";
+import { URL_BACKEND, URL_SERVER } from "../../utils/constants";
 import { useGet } from "../../hooks/useGet";
 import PropTypes from "prop-types";
 
@@ -14,7 +14,6 @@ export const ProductsProvider = ({ children }) => {
     loading: true,
   });
 
-  // Memoriza el objeto para evitar recreaciones innecesarias
   const providerValue = useMemo(
     () => ({
       responseProducts,
@@ -25,7 +24,7 @@ export const ProductsProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    getProducts({ url: `${URL_SERVER}/products` });
+    getProducts({ url: `${URL_BACKEND}/api/products/all` });
   }, []);
 
   return (

@@ -1,18 +1,12 @@
 .view-product {
-  /* width: 100%; */
   display: flex;
   gap: 100px;
-  /* padding: 0 clamp(4.5rem, 10vw, 12rem); */
   margin: 0 auto;
-  /* margin-top: 40px; */
   padding: 80px 0;
-  /* border: 1px solid blue; */
 }
 
 .view-product__image-box {
-  /* width: 50%; */
   text-align: center;
-  /* border: 1px solid orange; */
 }
 
 .view-product__image {
@@ -21,21 +15,16 @@
 }
 
 .view-product__info {
-  /* width: 50%; */
   max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* border: 1px solid green; */
 }
 
 .view-product__stock-text {
   color: var(--color-blood-red);
   font-weight: 600;
 }
-
-/* .view-product__stock {
-} */
 
 .view-product__price {
   color: var(--color-blood-green);
