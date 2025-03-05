@@ -5,6 +5,7 @@ import { ArtisanShopProfiles } from "../pages/ArtisanShopProfiles/ArtisanShopPro
 import { ArtisanShop } from "../pages/ArtisanShop/ArtisanShop";
 import { ViewProduct } from "../pages/ViewProduct/ViewProduct";
 import { PaymentForm } from "../pages/PaymentForm/PaymentForm";
+import { OrderDetails } from "../pages/OrderDetails/OrderDetails";
 
 export const MyRoutes = () => {
   return (
@@ -16,7 +17,8 @@ export const MyRoutes = () => {
       <Route path="/products/:category/:id" element={<ViewProduct />} />
       <Route path="/payment-form" element={<PaymentForm />} />
       <Route path="/artisans-shops" element={<ArtisanShopProfiles />} />
-      <Route path="/artisans/:id" element={<ArtisanShop />}></Route>
+      <Route path="/artisans/:id" element={<ArtisanShop />} />
+      <Route path="/order-details" element={<OrderDetails />} />
     </Routes>
   );
 };

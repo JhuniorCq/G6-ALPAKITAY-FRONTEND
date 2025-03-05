@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useGet } from "../../hooks/useGet";
 import { URL_SERVER } from "../../utils/constants";
 import "./ViewProduct.css";
+import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
+import { shoppingCartToast } from "../../utils/notifications/toasts";
 
 export const ViewProduct = () => {
+  const { addProductCart, shoppingCart } = useContextShoppingCart();
   const { id } = useParams();
   const {
     responseGet: responseProduct,
@@ -14,6 +17,31 @@ export const ViewProduct = () => {
   } = useGet({
     loading: true,
   });
+
+  const existingProductCart = useMemo(
+    () => shoppingCart.some((product) => product.id === id),
+    [shoppingCart]
+  );
+
+  const addProductShoppingCart = () => {
+    if (existingProductCart) {
+      shoppingCartToast({
+        title: "Este producto ya existe en el carrito",
+        position: "bottom-left",
+        icon: "warning",
+      });
+
+      return;
+    }
+
+    addProductCart(responseProduct);
+
+    shoppingCartToast({
+      title: "Se ha agregado el producto al carrito",
+      position: "bottom-left",
+      icon: "success",
+    });
+  };
 
   useEffect(() => {
     getProduct({ url: `${URL_SERVER}/products/${id}` });
@@ -48,14 +76,16 @@ export const ViewProduct = () => {
           <p className="view-product__artisan-text">
             Producto fabricado por{" "}
             <span className="view-product__artisan-name">
-              {responseProduct.artisanShop}
+              {responseProduct.artisanShop ?? "-"}
             </span>
-            {/* Este artisanShop tal vez lo quito, ya que el back no me lo enviará */}
           </p>
           <p className="view-product__description">
             {responseProduct.description}
           </p>
-          <button className="view-product__add-button">
+          <button
+            className="view-product__add-button"
+            onClick={addProductShoppingCart}
+          >
             Agregar al carrito
           </button>
         </div>

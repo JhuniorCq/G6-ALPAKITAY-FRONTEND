@@ -1,4 +1,3 @@
-import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
 import { calculateTotalCost, quantityOfItems } from "../../utils/logic";
 import PropTypes from "prop-types";
 import { useContextMethods } from "../../hooks/useContextMethods";
@@ -6,23 +5,23 @@ import { useMemo } from "react";
 import { SHIPPING_COST_AGENCY } from "../../utils/constants";
 import "./OrderSummary.css";
 
-export const OrderSummary = ({ currentShippingMethod }) => {
-  const { shoppingCart } = useContextShoppingCart();
+export const OrderSummary = ({ orderedProducts, shippingMethod }) => {
   const { responseMethods, loadingMethods, errorMethods } = useContextMethods();
+
   const shippingIsAgency = useMemo(
-    () => currentShippingMethod === responseMethods.shippingOptions[0].name,
-    [currentShippingMethod, responseMethods]
+    () => shippingMethod === responseMethods?.shippingOptions[0].name,
+    [shippingMethod, responseMethods]
   );
 
   return (
     <div className="order-summary">
       <ul className="order-summary__product-list">
-        {shoppingCart.length === 0 ? (
+        {orderedProducts.length === 0 ? (
           <li className="order-summary__empty-cart-message">
             No existen productos en el carrito
           </li>
         ) : (
-          shoppingCart.map((product) => (
+          orderedProducts.map((product) => (
             <li key={product.id} className="order-summary__product">
               <div className="order-summary__image-box">
                 <img
@@ -55,8 +54,8 @@ export const OrderSummary = ({ currentShippingMethod }) => {
         {!loadingMethods && !errorMethods && responseMethods && (
           <>
             <div className="order-summary__subtotal-cost-box">
-              <p>Subtotal ({quantityOfItems(shoppingCart)} items)</p>
-              <p>S/. {calculateTotalCost(shoppingCart).toFixed(2)}</p>
+              <p>Subtotal ({quantityOfItems(orderedProducts)} items)</p>
+              <p>S/. {calculateTotalCost(orderedProducts).toFixed(2)}</p>
             </div>
             <div className="order-summary__shipping-cost-box">
               <p>Costo de envío</p>
@@ -73,7 +72,7 @@ export const OrderSummary = ({ currentShippingMethod }) => {
                 <p>
                   S/.{" "}
                   {(
-                    calculateTotalCost(shoppingCart) +
+                    calculateTotalCost(orderedProducts) +
                     (shippingIsAgency ? SHIPPING_COST_AGENCY : 0)
                   ).toFixed(2)}
                 </p>
@@ -87,5 +86,6 @@ export const OrderSummary = ({ currentShippingMethod }) => {
 };
 
 OrderSummary.propTypes = {
-  currentShippingMethod: PropTypes.string.isRequired,
+  shippingMethod: PropTypes.string.isRequired,
+  orderedProducts: PropTypes.array.isRequired,
 };

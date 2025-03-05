@@ -110,7 +110,6 @@ export const ViewProducts = () => {
                     name={product.name}
                     price={product.price}
                     image={product.image}
-                    // description={product.description}
                     category={product.category}
                     artisanShop={product.artisanShop}
                   />

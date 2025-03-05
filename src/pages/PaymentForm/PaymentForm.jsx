@@ -11,8 +11,11 @@ import { useNavigate } from "react-router-dom";
 import { useContextMethods } from "../../hooks/useContextMethods";
 import "./PaymentForm.css";
 import { placeOrderToast } from "../../utils/notifications/toasts";
+import { useContextShoppingCart } from "../../hooks/useContextShoppingCart";
+import { KEY_ORDER_DATA_LOCAL_STORAGE } from "../../utils/constants";
 
 export const PaymentForm = () => {
+  const { shoppingCart, removeAllProductsCart } = useContextShoppingCart();
   const { responseMethods, loadingMethods, errorMethods } = useContextMethods();
 
   const [paymentMethods, setPaymentMethods] = useState([]);
@@ -36,7 +39,7 @@ export const PaymentForm = () => {
     },
   });
 
-  const currentShippingMethod = watch("shipping");
+  const currentShippingMethod = getValues("shipping");
 
   const onSubmit = (data) => {
     console.log("Enviando datos al servidor: ", data);
@@ -45,6 +48,15 @@ export const PaymentForm = () => {
       position: "top-end",
       title: "Pedido realizado con éxito",
     });
+
+    window.localStorage.setItem(
+      KEY_ORDER_DATA_LOCAL_STORAGE,
+      JSON.stringify({ formData: data, orderedProducts: shoppingCart })
+    );
+
+    removeAllProductsCart();
+
+    navigate("/order-details");
   };
 
   const onError = (errors) => {
@@ -161,7 +173,7 @@ export const PaymentForm = () => {
                 errors={errors}
               />
 
-              {getValues("shipping") === shippingMethods[0].name ? (
+              {currentShippingMethod === shippingMethods[0].name ? (
                 <AgencyBox name="agency" control={control} errors={errors} />
               ) : (
                 <div>Sucursal de Alpakitay ...</div>
@@ -188,7 +200,10 @@ export const PaymentForm = () => {
         </div>
 
         <div className="payment-form__order-summary-box">
-          <OrderSummary currentShippingMethod={currentShippingMethod} />
+          <OrderSummary
+            orderedProducts={shoppingCart}
+            shippingMethod={currentShippingMethod}
+          />
         </div>
       </section>
     );

@@ -24,6 +24,8 @@ export const ProductsProvider = ({ children }) => {
     [responseProducts, loadingProducts, errorProducts]
   );
 
+  console.log(responseProducts);
+
   useEffect(() => {
     getProducts({ url: `${URL_SERVER}/products` });
   }, []);

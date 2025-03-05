@@ -10,6 +10,17 @@ export const SHOPPING_CART_ACTIONS = {
   REMOVE_ALL_PRODUCTS: "Remover todos los productos",
 };
 
-export const CART_KEY_SESSION_STORAGE = "shoppingCart";
+export const CART_KEY_LOCAL_STORAGE = "shoppingCart";
+export const KEY_ORDER_DATA_LOCAL_STORAGE = "orderData";
 
 export const SHIPPING_COST_AGENCY = 9;
+
+export const SHIPPING_METHODS = {
+  AGENCY: "agencia",
+  PICK_UP: "recojo",
+};
+
+export const PAYMENT_METHODS = {
+  PAYPAL: "paypal",
+  YAPE: "yape",
+};

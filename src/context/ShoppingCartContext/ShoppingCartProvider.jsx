@@ -1,7 +1,7 @@
 import { useMemo, useReducer } from "react";
 import { ShoppingCartContext } from "./ShoppingCartContext";
 import {
-  CART_KEY_SESSION_STORAGE,
+  CART_KEY_LOCAL_STORAGE,
   SHOPPING_CART_ACTIONS,
 } from "../../utils/constants";
 import PropTypes from "prop-types";
@@ -62,7 +62,7 @@ export const ShoppingCartProvider = ({ children }) => {
     }
 
     window.localStorage.setItem(
-      CART_KEY_SESSION_STORAGE,
+      CART_KEY_LOCAL_STORAGE,
       JSON.stringify(updatedStatus)
     );
 
@@ -70,7 +70,7 @@ export const ShoppingCartProvider = ({ children }) => {
   };
 
   const getCartLocalStorage = (initialShoppingCart) => {
-    const cartSaved = window.localStorage.getItem(CART_KEY_SESSION_STORAGE);
+    const cartSaved = window.localStorage.getItem(CART_KEY_LOCAL_STORAGE);
     return cartSaved ? JSON.parse(cartSaved) : initialShoppingCart;
   };
 

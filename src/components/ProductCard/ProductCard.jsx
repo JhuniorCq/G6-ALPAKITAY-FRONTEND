@@ -12,7 +12,6 @@ export const ProductCard = ({
   name,
   price,
   image,
-  // description,
   category,
   artisanShop,
 }) => {
@@ -82,8 +81,9 @@ export const ProductCard = ({
         <p className="product-card__price">S/. {price}</p>
         <p className="product-card__artisan">
           Producto de{" "}
-          <span className="product-card__artisan-name">{artisanShop}</span>
-          {/* artisanShop lo puedo quitar, ya que el back no me dará ese dato */}
+          <span className="product-card__artisan-name">
+            {artisanShop ?? "-"}
+          </span>
         </p>
       </div>
     </li>
@@ -96,7 +96,6 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
-  // description: PropTypes.string,
   category: PropTypes.string.isRequired,
   artisanShop: PropTypes.string.isRequired,
 };
