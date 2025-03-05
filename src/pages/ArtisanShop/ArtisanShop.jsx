@@ -113,7 +113,7 @@ export const ArtisanShop = () => {
         </div>
       )}
 
-      {filteredProducts.length > 0 && (
+      {filteredProducts.length > 0 ? (
         <div className="artisan-shop__products">
           <h3>Productos de {artisanShop.name}</h3>
           <div className="products-list">
@@ -130,6 +130,10 @@ export const ArtisanShop = () => {
             ))}
           </div>
         </div>
+      ) : (
+        <p>
+          Esta tienda aún no tiene productos disponibles.
+        </p>
       )}
     </section>
   );
